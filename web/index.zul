@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<!-- protect page by the authentication init  -->
+<?init class="controllers.AuthenticationInit"?>
+<!-- authentication init have to locate before composition -->
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/layout/template.zul"?>
 
-<borderlayout>
-    <west title="West" size="25%" flex="true" maxsize="250" splittable="true" collapsible="true">
-				
-    </west>
-    <center border="none" flex="true">
-				
-    </center>
-    <east size="50%" border="none" flex="true">
-				
-    </east>
-</borderlayout>
+<zk>
+	<include id="mainInclude" self="@define(content)" src="/home.zul"/>
+</zk>
