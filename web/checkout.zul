@@ -1,0 +1,240 @@
+
+<zk xmlns:h="native">
+	
+    <include src="/layout/header.zul" />
+    
+    <h:div class="wrapper"> 
+    
+    <!-- Start Main Content Holder -->
+  <h:section id="content-holder" class="container-fluid container">
+    <h:section class="row-fluid">
+      <h:div class="heading-bar">
+        <h:h2>Checkout</h:h2>
+        <h:span class="h-line"></h:span> 
+      </h:div>
+      <!-- Start Main Content -->
+      <h:section class="checkout-holder">
+        <h:section class="span9 first">
+          <!-- Start Accordian Section -->
+          <h:div class="accordion" id="accordion2">
+            
+            <h:div class="accordion-group">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"> Shipping Information </h:a> </h:div>
+              <h:div id="collapseThree" class="accordion-body collapse">
+                <h:div class="accordion-inner"> 
+                    <h:form class="form-horizontal">
+                        <h:ul class="billing-form">
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputFirstname">First Name <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputFirstname" placeholder=""/>
+                                </h:div>
+                              </h:div>
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputLastname">Last Name<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputLastname" placeholder=""/>
+                                </h:div>
+                              </h:div>
+                              
+                            </h:li>
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputEmail">Email Address<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputEmail" placeholder=""/>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputAddress">Address<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputAddress" placeholder="" class="address-field"/>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                               
+                              
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputTelephone">Telephone <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputTelephone" placeholder=""/>
+                                </h:div>
+                                <h:label class="radio b-label">
+                                    <h:input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
+                                    Ship to this address 
+                                </h:label>
+                                <h:label class="radio b-label">
+                                    <h:input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+                                    different address 
+                                </h:label>
+                              </h:div>
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputFax">Fax<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputFax" placeholder="" />
+                                  <h:strong class="green-t">* Required Fields</h:strong>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                            <h:li>
+                            	<h:div class="control-group">
+                                <h:div class="controls">
+                                  <h:button type="submit" class="more-btn">Continue</h:button>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                        </h:ul>
+                    </h:form>
+                </h:div>
+              </h:div>
+            </h:div>
+            <h:div class="accordion-group">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFifth"> Payment Information </h:a> </h:div>
+              <h:div id="collapseFifth" class="accordion-body collapse">
+                <h:div class="accordion-inner">
+                	<h:form class="form-horizontal">
+                        <h:ul class="billing-form">
+                            <h:li>   
+                            	<h:div class="label-holder">
+                                	<h:label class="radio b-label">
+                                    <h:input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  />
+                                    Ship to this address 
+                                </h:label>
+                                <h:label class="radio b-label">
+                                    <h:input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+                                    different address 
+                                </h:label>
+                                </h:div>
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputCardname">Name on Card<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputCardname" placeholder=""/>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputCardtype">Credit Card Type <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:select name="state" size="1">
+                                    <h:option  value="">Please select one</h:option>
+                                    <h:option  value="">Please select Two</h:option>
+                                    <h:option  value="">Please select Three</h:option>
+                                  </h:select>
+                                </h:div>
+                              </h:div>
+                            </h:li>                            
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputCreditcardnum">Credit Card Number  <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputCreditcardnum" placeholder=""/>
+                                </h:div>
+                              </h:div>
+                              
+                            </h:li>
+                            <h:li>
+                            	<h:div class="control-group w-extra">
+                                <h:label class="control-label" for="inputExpirationdate">Expiration Date<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:select name="state" size="1" class="month-list">
+                                    <h:option  value="">Month</h:option>
+                                    <h:option value="">Month</h:option>
+                                    <h:option value="">Month</h:option>
+                                  </h:select>
+                                  <h:select name="state" size="1" class="year-list">
+                                    <h:option value="">Year</h:option>
+                                    <h:option value="">Year</h:option>
+                                    <h:option value="">Year</h:option>
+                                  </h:select>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputCardVerification"> Card Verification Number <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputCardVerification" placeholder="" />
+                                  <h:strong class="green-t">* Required Fields</h:strong>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                        	<h:li>
+                            	<h:div class="control-group">
+                                <h:div class="controls">
+                                  <h:button type="submit" class="more-btn">Continue</h:button>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                        </h:ul>
+                    </h:form>
+                </h:div>
+              </h:div>
+            </h:div>
+            <h:div class="accordion-group">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSixth"> Order Review </h:a> </h:div>
+              <h:div id="collapseSixth" class="accordion-body collapse">
+                <h:div class="accordion-inner no-p">
+                  <h:table width="100%" border="0" cellpadding="14">
+                    <h:tr class="heading-bar-table">
+                      <h:th width="47%" align="left">Product Name</h:th>
+                      <h:th width="18%">Price</h:th>
+                      <h:th width="19%">Quantity</h:th>
+                      <h:th width="16%">Subtotal </h:th>
+                    </h:tr>
+                    <h:tr>
+                      <h:td width="47%" align="left"><h:a href="#">The Kite Runner</h:a> by Khalid Housseni</h:td>
+                      <h:td width="18%">$1,680.00 </h:td>
+                      <h:td width="19%">1 </h:td>
+                      <h:td width="16%">$1,680.00 </h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td align="left"><h:a href="#">The Kite Runner</h:a> by Khalid Housseni </h:td>
+                      <h:td>$60.50 </h:td>
+                      <h:td>1 </h:td>
+                      <h:td>$1,680.00 </h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td align="left"><h:a href="#">The Kite Runner</h:a> by Khalid Housseni </h:td>
+                      <h:td>$180.20 </h:td>
+                      <h:td>1</h:td>
+                      <h:td>$1,680.00 </h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td colspan="3" align="right">
+                      	<h:p>Subtotal</h:p>
+                        <h:p>Shipping + Handing (Flat rate: Fixed $25.00)</h:p>
+                        <h:p>Grand Total</h:p>                      
+                      </h:td>
+                      <h:td>
+                      	<h:p>$1,921.00</h:p>
+                        <h:p>$25.00</h:p>
+                        <h:p>$1,946.00</h:p>                      
+                      </h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td colspan="3" align="left">Forgot an items? Edit your cart</h:td>
+                      <h:td><h:a href="#" class="more-btn">Place Order</h:a> </h:td>
+                    </h:tr>
+                  </h:table>
+                </h:div>
+              </h:div>
+            </h:div>
+          </h:div>
+          <!-- End Accordian Section -->
+        </h:section>
+        
+      </h:section>
+      <!-- End Main Content -->
+    </h:section>
+  </h:section>
+  <!-- End Main Content Holder -->
+  </h:div>
+    
+    <include src="/layout/footer.zul" />
+    
+</zk>

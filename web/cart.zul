@@ -1,0 +1,122 @@
+
+<zk xmlns:h="native">
+    <include src="/layout/header.zul" />
+    
+    <h:div class="wrapper">
+        
+        <!-- Start Main Content Holder -->
+  <h:section id="content-holder" class="container-fluid container">
+    <h:section class="row-fluid">
+        <!-- Start Main Content -->
+        <h:section class="span12 cart-holder">
+            <h:div class="heading-bar">
+            	<h:h2>SHOPPING CART</h:h2>
+                <h:span class="h-line"></h:span>
+            	<h:a href="checkout.zul" class="more-btn">proceed to checkout</h:a>
+            </h:div>
+            <h:div class="cart-table-holder">
+            	<h:table width="100%" border="0" cellpadding="10">
+                  <h:tr>
+                    <h:th width="14%"> </h:th>
+                    <h:th width="43%" align="left">Product Name</h:th>
+                    <h:th width="6%"></h:th>
+                    <h:th width="10%">Unit Price</h:th>
+                    <h:th width="10%">Quantity</h:th>
+                    <h:th width="12%">Subtota</h:th>
+                    <h:th width="5%"> </h:th>
+                  </h:tr>
+                  <h:tr bgcolor="#FFFFFF" class=" product-detail">
+                    <h:td valign="top"><h:img src="images/image07.jpg" /></h:td>
+                    <h:td valign="top">The Kite Runner by Khalid Hosseini</h:td>
+                    <h:td align="center" valign="top"><h:a href="#">Edit</h:a></h:td>
+                    <h:td align="center" valign="top">$295.00</h:td>
+                    <h:td align="center" valign="top"><h:input name="" type="text" value="1" /></h:td>
+                    <h:td align="center" valign="top">$295.00</h:td>
+                    <h:td align="center" valign="top"><h:a href="#"> <h:i class="icon-trash"></h:i></h:a></h:td>
+                  </h:tr>
+                 
+                </h:table>
+
+            </h:div>
+            
+            <h:figure class="span4 first">
+            	<h:div class="cart-option-box">
+                	<h:h4><h:i class="icon-shopping-cart"></h:i> ESTIMATE SHIPPING and TAX</h:h4>
+                    <h:p>Enter your destination to get a shipping estimate.</h:p>
+                    <h:form class="form-horizontal">
+                        <h:ul class="billing-form">
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputState/Province">State/Province<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:select id="formState" name="state" size="1">
+                                    
+                                  </h:select>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputCountry">Country <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:select id="#formCountry" name="country">
+                                        
+                                   </h:select>
+                                </h:div>
+                              </h:div>
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputZip">Zip/Postal Code <h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="inputZip" placeholder=""/>
+                                </h:div>
+                              </h:div>
+                              
+                            </h:li>
+                            <h:li>
+                            	<h:div class="control-group">
+                                <h:div class="controls">
+                                  <h:button type="submit" class="more-btn">get a quote</h:button>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                        </h:ul>
+                    </h:form>
+                </h:div>
+            </h:figure>
+            <h:figure class="span4">
+            	<h:div class="cart-option-box">
+                	<h:h4><h:i class="icon-money"></h:i> DISCOUNT CODES</h:h4>
+                    <h:p>Enter your coupon code if you have one.</h:p>
+                    <h:input type="text" id="inputDiscount" placeholder=""/>
+                    <h:br class="clearfix"/>
+                    <h:a href="#" class="more-btn">apply coupon</h:a>
+                </h:div>
+            </h:figure>
+            <h:figure class="span4 price-total">
+            	<h:div class="cart-option-box">
+                    <h:table width="100%" border="0" cellpadding="10" class="total-payment">
+                      <h:tr>
+                        <h:td width="55%" align="right"><h:strong>Subtotal</h:strong></h:td>
+                        <h:td width="45%" align="left">$295.00</h:td>
+                      </h:tr>
+                      <h:tr>
+                        <h:td align="right"><h:strong class="large-f">GRAND TOTAL</h:strong></h:td>
+                        <h:td align="left"><h:strong class="large-f">$295.00</h:strong></h:td>
+                      </h:tr>
+                  </h:table>
+                  <h:hr/>
+                    <h:a href="#" class="more-btn">proceed to checkout</h:a>
+                    <h:p>Checkout with Multiple Addresses</h:p>
+                </h:div>
+            </h:figure>
+        </h:section>
+        <!-- End Main Content -->
+    </h:section>
+  </h:section>
+  <!-- End Main Content Holder -->
+        
+    </h:div>
+    
+    <include src="/layout/footer.zul" />
+    
+</zk>

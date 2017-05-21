@@ -1,0 +1,59 @@
+
+<zk xmlns:h="native">
+    <include src="/layout/header.zul" />
+    
+    <h:div class="wrapper">
+        <h:section id="content-holder" class="container-fluid container">
+        <h:div class="span5 check-method-right"> 
+        <h:strong class="green-t">Register</h:strong>
+                    <h:form class="form-horizontal">
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputFirstName">First Name <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputFirstName" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputLastName">Last Name <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputLastName" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputEmail">Email Address <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputEmail" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputPassword">Password <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="password" id="inputPassword" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputAddress">Address <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputAddress" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputPhone">Phone <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputPhone" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:p><h:a href="#">Forgot your password?</h:a></h:p>
+                      <h:div class="control-group">
+                        <h:div class="controls">
+                          <h:button type="submit" class="more-btn">Register</h:button>
+                        </h:div>
+                      </h:div>
+                    </h:form>
+                    <h:p>Already registered? Please <h:a href="login.zul">log in</h:a>!</h:p>
+                  </h:div>
+    </h:section>
+    </h:div>
+    
+    <include src="/layout/footer.zul" />
+</zk>

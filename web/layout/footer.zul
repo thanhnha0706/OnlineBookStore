@@ -1,6 +1,137 @@
-<div hflex="1" vflex="1" sclass="footer">
-	<vbox hflex="1" vflex="1" align="center">
-		ZK Essentials, you are using ZK ${desktop.webApp.version}
-		<a href="http://www.zkoss.org">http://www.zkoss.org</a>
-	</vbox>
+<div hflex="1" vflex="1" sclass="wrapper" xmlns:h="native">
+
+    <h:div class="wrapper">
+      <!-- Start Footer Top 1 -->
+  <h:section class="container-fluid footer-top1">
+    <h:section class="container">
+      <h:section class="row-fluid">
+        <h:figure class="span3">
+          <h:h4>Newsletter</h:h4>
+          <h:p>Subscribe to be the first to know about Best Deals and Exclusive Offers!</h:p>
+          <h:input name="" type="text" class="field-bg" value="Enter Your Email"/>
+          <h:input name="" type="submit" value="Subscribe" class="sub-btn" />
+        </h:figure>
+        <h:figure class="span3">
+          <h:h4>Twitter</h:h4>
+          <h:ul class="tweets-list">
+            <h:li>Bookshoppe’- WooCommerce theme by crunchpress http<h:a href="#">://z.8o/XcexW23Q #envato</h:a></h:li>
+            <h:li>Bookshoppe’- WooCommerce theme by crunchpress http<h:a href="#">://z.8o/XcexW23Q #envato</h:a></h:li>
+          </h:ul>
+        </h:figure>
+        <h:figure class="span3">
+          <h:h4>Location</h:h4>
+          <h:p>5/23, Loft Towers, Business Center, 6th Floor, Media City, Dubai.</h:p>
+          <h:span>
+          <h:ul class="phon-list">
+            <h:li>(971) 438-555-314</h:li>
+            <h:li>(971) 367-252-333</h:li>
+          </h:ul>
+          </h:span> <h:span class="mail-list"> <h:a href="#">info@companyname</h:a><h:br />
+          <h:a href="#">jobs@companyname.com</h:a> </h:span> </h:figure>
+        <h:figure class="span3">
+          <h:h4>Opening Time</h:h4>
+          <h:p>Monday-Friday ______8.00 to 18.00</h:p>
+          <h:p>Saturday ____________ 9.00 to 18.00</h:p>
+          <h:p>Sunday _____________10.00 to 16.00</h:p>
+          <h:p>Every 30 day of month Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h:p>
+        </h:figure>
+      </h:section>
+    </h:section>
+  </h:section>
+  <!-- End Footer Top 1 -->
+  <!-- Start Footer Top 2 -->
+  <h:section class="container-fluid footer-top2">
+    <h:section class="social-ico-bar">
+      <h:section class="container">
+        <h:section class="row-fluid">
+          <h:div id="socialicons" class="hidden-phone"> <h:a id="social_linkedin" class="social_active" href="#" title="Visit Google Plus page"><h:span></h:span></h:a> <h:a id="social_facebook" class="social_active" href="#" title="Visit Facebook page"><h:span></h:span></h:a> <h:a id="social_twitter" class="social_active" href="#" title="Visit Twitter page"><h:span></h:span></h:a> <h:a id="social_youtube" class="social_active" href="#" title="Visit Youtube"><h:span></h:span></h:a> <h:a id="social_vimeo" class="social_active" href="#" title="Visit Vimeo"><h:span></h:span></h:a> <h:a id="social_trumblr" class="social_active" href="#" title="Visit Vimeo"><h:span></h:span></h:a> <h:a id="social_google_plus" class="social_active" href="#" title="Visit Vimeo"><h:span></h:span></h:a> <h:a id="social_dribbble" class="social_active" href="#" title="Visit Vimeo"><h:span></h:span></h:a> <h:a id="social_pinterest" class="social_active" href="#" title="Visit Vimeo"><h:span></h:span></h:a> </h:div>
+          <h:ul class="footer2-link">
+            <h:li><h:a href="about-us.html">About Us</h:a></h:li>
+            <h:li><h:a href="contact.html">Customer Service</h:a></h:li>
+            <h:li><h:a href="order-recieved.html">Orders Tracking</h:a></h:li>
+          </h:ul>
+        </h:section>
+      </h:section>
+    </h:section>
+    <h:section class="container">
+      <h:section class="row-fluid">
+        <h:figure class="span4">
+          <h:h4>BestSellers</h:h4>
+          <h:ul class="f2-img-list">
+            <h:li>
+              <h:div class="left"><h:a href="book-detail.html"><h:img src="images/image19.jpg" /></h:a></h:div>
+              <h:div class="right"> <h:strong class="title"><h:a href="book-detail.html">fields</h:a></h:strong> <h:span class="by-author">by Arnold Grey</h:span> <h:span class="f-price">$127.55</h:span> </h:div>
+            </h:li>
+          </h:ul>
+        </h:figure>
+        <h:figure class="span4">
+          <h:h4>Top Rated Books</h:h4>
+          <h:ul class="f2-img-list">
+            <h:li>
+              <h:div class="left"><h:a href="book-detail.html"><h:img src="images/image35.jpg" alt=""/></h:a></h:div>
+              <h:div class="right"> <h:strong class="title"><h:a href="book-detail.html">A little rain</h:a></h:strong> <h:span class="by-author">by Arnold Grey</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
+            </h:li>
+            <h:li>
+              <h:div class="left"><h:a href="book-detail.html"><h:img src="images/image35.jpg" alt=""/></h:a></h:div>
+              <h:div class="right"> <h:strong class="title"><h:a href="book-detail.html">A little rain</h:a></h:strong> <h:span class="by-author">by Arnold Grey</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
+            </h:li>
+            <h:li>
+              <h:div class="left"><h:a href="book-detail.html"><h:img src="images/image35.jpg" alt=""/></h:a></h:div>
+              <h:div class="right"> <h:strong class="title"><h:a href="book-detail.html">A little rain</h:a></h:strong> <h:span class="by-author">by Arnold Grey</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
+            </h:li>
+          </h:ul>
+        </h:figure>
+        <h:figure class="span4">
+          <h:h4>From the blog</h:h4>
+          <h:ul class="f2-pots-list">
+            <h:li> <h:span class="post-date2">28 APR</h:span> <h:a href="blog-detail.html">Corso completo di grafica web completo di grafi dare...</h:a> <h:span class="comments-num">6 comments</h:span> </h:li>
+            <h:li> <h:span class="post-date2">28 APR</h:span> <h:a href="blog-detail.html">Corso completo di grafica web completo di grafi dare...</h:a> <h:span class="comments-num">6 comments</h:span> </h:li>
+            <h:li> <h:span class="post-date2">28 APR</h:span> <h:a href="blog-detail.html">Corso completo di grafica web completo di grafi dare...</h:a> <h:span class="comments-num">6 comments</h:span> </h:li>
+          </h:ul>
+        </h:figure>
+      </h:section>
+    </h:section>
+  </h:section>
+  <!-- End Footer Top 2 -->
+  <!-- Start Main Footer -->
+  <h:footer id="main-footer">
+    <h:section class="social-ico-bar">
+      <h:section class="container">
+        <h:section class="row-fluid">
+          <h:article class="span6">
+            <h:p>© 2013  BookShoppe’ - Premium WooCommerce Theme. </h:p>
+          </h:article>
+          <h:article class="span6 copy-right">
+            <h:p>Designed by <a href="http://www.crunchpress.com/">Crunchpress.com</a></h:p>
+          </h:article>
+        </h:section>
+      </h:section>
+    </h:section>
+  </h:footer>
+  <!-- End Main Footer -->
+</h:div>
+<!-- End Main Wrapper -->
+<!-- JS Files Start -->
+<h:script type="text/javascript" src="js/lib.js"></h:script><!-- lib Js -->
+<h:script type="text/javascript" src="js/modernizr.js"></h:script><!-- Modernizr -->
+<h:script type="text/javascript" src="js/easing.js"></h:script><!-- Easing js -->
+<h:script type="text/javascript" src="js/bs.js"></h:script><!-- Bootstrap -->
+<h:script type="text/javascript" src="js/bxslider.js"></h:script><!-- BX Slider -->
+<h:script type="text/javascript" src="js/input-clear.js"></h:script><!-- Input Clear -->
+<h:script src="js/range-slider.js"></h:script><!-- Range Slider -->
+<h:script src="js/jquery.zoom.js"></h:script><!-- Zoom Effect -->
+<h:script type="text/javascript" src="js/bookblock.js"></h:script><!-- Flip Slider -->
+<h:script type="text/javascript" src="js/custom.js"></h:script><!-- Custom js -->
+<h:script type="text/javascript" src="js/social.js"></h:script><!-- Social Icons -->
+<!-- JS Files End -->
+<h:script type="text/javascript">
+  $(document).ready(function() {
+  $('.social_active').hoverdir( {} );
+})
+</h:script>
+<!--</h:body>-->
+<!--</h:html>-->
+    
+    
+    
 </div>

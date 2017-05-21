@@ -1,38 +1,36 @@
-<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
-<!-- it is a login page, no authentication protection and use anonymous template -->
-<?init class="org.zkoss.zk.ui.util.Composition" arg0="/layout/template-anonymous.zul"?>
-<zk>
-	<hbox self="@define(content)" vflex="1" hflex="1" align="center"
-		pack="center" spacing="20px">
-		<vlayout>
-			<window id="loginWin"
-				apply="controllers.LoginController"
-				title="Login with your name" border="normal" hflex="min">
-				<vbox hflex="min" align="center">
-					<grid hflex="min">
-						<columns>
-							<column hflex="min" align="right" />
-							<column />
-						</columns>
-						<rows>
-                                                   
-							<row>
-								Account :
-								<textbox id="account" width="200px" />
-							</row>
-							<row>
-								Password :
-								<textbox id="password" type="password"
-									width="200px" />
-							</row>
-						</rows>
-					</grid>
-					<label id="message" sclass="warn" value="&#160;" />
-					<button id="login" label="Login" />
-					
-				</vbox>
-			</window>
-			(use account='zkoss' and password='1234' to login)
-		</vlayout>
-	</hbox>
+
+<zk xmlns:h="native">
+    <include src="/layout/header.zul" />
+    
+    <h:div class="wrapper">
+        <h:section id="content-holder" class="container-fluid container">
+        <h:div class="span5 check-method-right"> 
+        <h:strong class="green-t">Login</h:strong>
+                   
+                    <h:form class="form-horizontal">
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputEmail">Email Address <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputEmail" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputPassword">Password <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="password" id="inputPassword" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:p><h:a href="#">Forgot your password?</h:a></h:p>
+                      <h:div class="control-group">
+                        <h:div class="controls">
+                          <h:button type="submit" class="more-btn">Login</h:button>
+                        </h:div>
+                      </h:div>
+                    </h:form>
+                    <h:p>Don't have an account? Please <h:a href="register.zul">register</h:a>!</h:p>
+                  </h:div>
+    </h:section>
+    </h:div>
+    
+    <include src="/layout/footer.zul" />
 </zk>
