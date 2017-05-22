@@ -1,13 +1,15 @@
 
 <zk xmlns:h="native">
+    
+        <h:div class="wrapper">
+
     <include src="/layout/header.zul" />
     
-    <h:div class="wrapper">
-        <h:section id="content-holder" class="container-fluid container">
-        <h:div class="span5 check-method-right"> 
-        <h:strong class="green-t">Login</h:strong>
-                   
-                    <h:form class="form-horizontal">
+        <h:section id="content-holder" class="container-fluid container m-bottom" style="display: flex;">
+            <!--<h:section class="row-fluid">-->
+                <h:div class="span5 check-method-right" style="margin: 0 auto"> 
+                <h:strong class="green-t">Login</h:strong>
+                <h:form class="form-horizontal">
                       <h:div class="control-group">
                         <h:label class="control-label" for="inputEmail">Email Address <h:sup>*</h:sup></h:label>
                         <h:div class="controls">
@@ -29,8 +31,10 @@
                     </h:form>
                     <h:p>Don't have an account? Please <h:a href="register.zul">register</h:a>!</h:p>
                   </h:div>
-    </h:section>
-    </h:div>
+            <!--</h:section>-->
+        </h:section>
     
     <include src="/layout/footer.zul" />
+    </h:div>
+
 </zk>

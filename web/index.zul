@@ -10,10 +10,14 @@
 <!--<?init class="org.zkoss.zk.ui.util.Composition" arg0="/layout/template.zul"?>-->
 
 <zk xmlns:h="native">
-    <include src="/layout/header.zul"/>
+  <!-- Start Main Wrapper -->
+  <h:div class="wrapper">
+
     
-    <h:div class="wrapper">
+    <include src="/layout/header.zul" />
+    
     <!-- Start Main Content Holder -->
+    <div>
   <h:section id="content-holder" class="container-fluid container">
     <h:section class="row-fluid">
       <h:section class="span12 slider">
@@ -108,8 +112,8 @@
       </h:figure>
     </h:section>
     <!-- Start BX Slider holder -->
-    <h:section class="row-fluid features-books">
-      <h:section class="span12 m-bottom">
+    <h:section class="row-fluid m-bottom">
+      <h:section class="span12 features-books">
         <h:div class="heading-bar">
           <h:h2>Featured Books</h:h2>
           <h:span class="h-line"></h:span> 
@@ -251,11 +255,11 @@
       <!-- End Testimonials Section -->
     </h:section>
   </h:section>
-  <!-- End Main Content Holder -->
-    </h:div>
+    </div>
+    <!-- End Main Content Holder -->
     
-    
-    
-   
     <include src="/layout/footer.zul"/>
+    
+    </h:div>
+    <!-- End Main Wrapper -->
 </zk>

@@ -338,7 +338,7 @@
 				}).get());
 			}
 			return height;
-		}
+		};
 
 		/**
 		 * Returns the calculated width to be used for the outer wrapper / viewport
@@ -346,14 +346,18 @@
 		var getViewportMaxWidth = function(){
 			var width = '100%';
 			if(slider.settings.slideWidth > 0){
-				if(slider.settings.mode == 'horizontal'){
+				if(slider.settings.mode === 'horizontal'){
 					width = (slider.settings.maxSlides * slider.settings.slideWidth) + ((slider.settings.maxSlides - 1) * slider.settings.slideMargin);
-				}else{
+				} else {
 					width = slider.settings.slideWidth;
 				}
 			}
+                                 
+                    width = "100%";
+//                    console.log(width);
+                    
 			return width;
-		}
+		};
 		
 		/**
 		 * Returns the calculated width to be applied to each slide

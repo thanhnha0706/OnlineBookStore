@@ -1,13 +1,13 @@
-<div hflex="1" vflex="1" sclass="banner" xmlns:h="native">
+<div xmlns:h="native">
     <!--<hbox hflex="1" vflex="1" align="center" xmlns:h="native">-->
       <!--<h:html>-->  
 <h:head>
 <h:title>Book Store</h:title>
 <!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<h:script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></h:script>
 <![endif]-->
 <!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<h:script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></h:script>
 <![endif]-->
 <h:meta http-equiv="cache-control" content="no-cache"/>
 <h:meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
@@ -29,7 +29,7 @@
         
         <!--<h:body>-->
 <!-- Start Main Wrapper -->
-<h:div class="wrapper">
+<!--<h:div class="wrapper">-->
         
         <h:section class="top-nav-bar">
     <h:section class="container-fluid container">
@@ -132,6 +132,6 @@
     <!-- End Main Nav Bar -->
   </h:header>
               
-</h:div>
+<!--</h:div>-->
     <!--</hbox>-->
 </div>

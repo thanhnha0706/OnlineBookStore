@@ -1,10 +1,13 @@
 
 <zk xmlns:h="native">
+    
+        <h:div class="wrapper">
+
+    
     <include src="/layout/header.zul" />
     
-    <h:div class="wrapper">
-        <h:section id="content-holder" class="container-fluid container">
-        <h:div class="span5 check-method-right"> 
+        <h:section id="content-holder" class="container-fluid container" style="display: flex;">
+        <h:div class="span5 check-method-right" style="margin: 0 auto;"> 
         <h:strong class="green-t">Register</h:strong>
                     <h:form class="form-horizontal">
                       <h:div class="control-group">
@@ -52,8 +55,8 @@
                     </h:form>
                     <h:p>Already registered? Please <h:a href="login.zul">log in</h:a>!</h:p>
                   </h:div>
-    </h:section>
-    </h:div>
-    
+    </h:section>    
     <include src="/layout/footer.zul" />
+   
+        </h:div>
 </zk>

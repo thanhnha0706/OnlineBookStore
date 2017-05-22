@@ -1,26 +1,26 @@
 
 <zk xmlns:h="native">
+    
+        <h:div class="wrapper">
 	
     <include src="/layout/header.zul" />
-    
-    <h:div class="wrapper"> 
-    
+       
     <!-- Start Main Content Holder -->
   <h:section id="content-holder" class="container-fluid container">
-    <h:section class="row-fluid">
+    <h:section class="row-fluid m-bottom">
       <h:div class="heading-bar">
         <h:h2>Checkout</h:h2>
         <h:span class="h-line"></h:span> 
       </h:div>
       <!-- Start Main Content -->
-      <h:section class="checkout-holder">
-        <h:section class="span9 first">
+      <!--<h:section class="checkout-holder">-->
+        <h:section class="span12 first">
           <!-- Start Accordian Section -->
           <h:div class="accordion" id="accordion2">
             
             <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"> Shipping Information </h:a> </h:div>
-              <h:div id="collapseThree" class="accordion-body collapse">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"> Shipping Information </h:a> </h:div>
+              <h:div id="collapseOne" class="accordion-body collapse in">
                 <h:div class="accordion-inner"> 
                     <h:form class="form-horizontal">
                         <h:ul class="billing-form">
@@ -93,8 +93,8 @@
               </h:div>
             </h:div>
             <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFifth"> Payment Information </h:a> </h:div>
-              <h:div id="collapseFifth" class="accordion-body collapse">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"> Payment Information </h:a> </h:div>
+              <h:div id="collapseTwo" class="accordion-body collapse">
                 <h:div class="accordion-inner">
                 	<h:form class="form-horizontal">
                         <h:ul class="billing-form">
@@ -176,8 +176,8 @@
               </h:div>
             </h:div>
             <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSixth"> Order Review </h:a> </h:div>
-              <h:div id="collapseSixth" class="accordion-body collapse">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"> Order Review </h:a> </h:div>
+              <h:div id="collapseThree" class="accordion-body collapse">
                 <h:div class="accordion-inner no-p">
                   <h:table width="100%" border="0" cellpadding="14">
                     <h:tr class="heading-bar-table">
@@ -218,12 +218,48 @@
                     </h:tr>
                     <h:tr>
                       <h:td colspan="3" align="left">Forgot an items? Edit your cart</h:td>
-                      <h:td><h:a href="#" class="more-btn">Place Order</h:a> </h:td>
+                      <h:td><h:a href="#" class="more-btn">Process to payment</h:a> </h:td>
                     </h:tr>
                   </h:table>
                 </h:div>
               </h:div>
             </h:div>
+            
+            <h:div class="accordion-group">
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Process to Payment </h:a> </h:div>
+              <h:div id="collapseFour" class="accordion-body collapse">
+                <h:div class="accordion-inner">
+                	<h:form class="form-horizontal">
+                        <h:ul class="billing-form">
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:label class="control-label" for="inputCardname">We've sent an OTP to your phone number. Please enter the code here!<h:sup>*</h:sup></h:label>
+                                <h:div class="controls">
+                                  <h:input type="text" id="otpCode" placeholder="Enter OTP here"/>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                                                       
+                            <h:li>   
+                              <h:div class="control-group">
+                                <h:div class="controls">
+                                  <h:strong class="green-t">* Required Fields</h:strong>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                        	<h:li>
+                            	<h:div class="control-group">
+                                <h:div class="controls">
+                                  <h:button type="submit" class="more-btn">Verify</h:button>
+                                </h:div>
+                              </h:div>
+                            </h:li>
+                        </h:ul>
+                    </h:form>
+                </h:div>
+              </h:div>
+            </h:div>
+            
           </h:div>
           <!-- End Accordian Section -->
         </h:section>
@@ -231,10 +267,10 @@
       </h:section>
       <!-- End Main Content -->
     </h:section>
-  </h:section>
+  <!--</h:section>-->
   <!-- End Main Content Holder -->
-  </h:div>
     
     <include src="/layout/footer.zul" />
-    
+      </h:div>
+
 </zk>

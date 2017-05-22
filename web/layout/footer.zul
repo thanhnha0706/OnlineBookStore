@@ -1,6 +1,6 @@
-<div hflex="1" vflex="1" sclass="wrapper" xmlns:h="native">
+<div xmlns:h="native">
 
-    <h:div class="wrapper">
+    <!--<h:div class="wrapper">-->
       <!-- Start Footer Top 1 -->
   <h:section class="container-fluid footer-top1">
     <h:section class="container">
@@ -109,7 +109,7 @@
     </h:section>
   </h:footer>
   <!-- End Main Footer -->
-</h:div>
+<!--</h:div>-->
 <!-- End Main Wrapper -->
 <!-- JS Files Start -->
 <h:script type="text/javascript" src="js/lib.js"></h:script><!-- lib Js -->

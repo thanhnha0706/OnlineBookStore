@@ -609,7 +609,7 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 	</xel-config>
 	-->
 
-	<library-property>
+<!--	<library-property>
 		<name>org.zkoss.zul.Button.mold</name>
 		<value>bs</value>
 	</library-property>
@@ -628,5 +628,5 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 	<library-property>
 		<name>org.zkoss.zul.Panel.mold</name>
 		<value>bs</value>
-	</library-property>
+	</library-property>-->
 </zk>
