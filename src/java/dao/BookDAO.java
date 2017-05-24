@@ -22,7 +22,7 @@ public class BookDAO extends BaseDAO {
         return (List<Book>)(Object)super.executeNamedQuery("Book.findAll");
     }
 
-    public Book findById(int Id) {
+    public Book findById(String Id) {
         return (Book)super.findObjectById(Id);
     }
 

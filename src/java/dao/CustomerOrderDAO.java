@@ -5,7 +5,9 @@
  */
 package dao;
 
+import entity.Customer;
 import entity.CustomerOrder;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -22,7 +24,7 @@ public class CustomerOrderDAO extends BaseDAO{
         return (List<CustomerOrder>)(Object)super.executeNamedQuery("CustomerOrder.findAll");
     }
 
-    public CustomerOrder findById(int Id) {
+    public CustomerOrder findById(String Id) {
         return (CustomerOrder)super.findObjectById(Id);
     }
 
@@ -37,4 +39,5 @@ public class CustomerOrderDAO extends BaseDAO{
     public boolean delete(CustomerOrder customerOrder) {
         return super.deleteObject(customerOrder);
     }
+    
 }

@@ -83,7 +83,7 @@ public abstract class BaseDAO<T> {
         return true;
     }
 
-    public Object findObjectById(int Id) {
+    public Object findObjectById(String Id) {
         Object Obj = null;
         try {
             EntityManager em = factory.createEntityManager();

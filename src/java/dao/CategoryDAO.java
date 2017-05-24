@@ -22,7 +22,7 @@ public class CategoryDAO extends BaseDAO{
         return (List<Category>)(Object)super.executeNamedQuery("Category.findAll");
     }
 
-    public Category findById(int Id) {
+    public Category findById(String Id) {
         return (Category)super.findObjectById(Id);
     }
 
