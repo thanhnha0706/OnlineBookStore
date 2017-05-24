@@ -1,5 +1,65 @@
 /* Start BX slider*/
-jQuery(document).ready(function($){	   
+jQuery(document).ready(function($){
+    
+     var book = {
+        bookId: 12,
+        imgUrl: "images/image01.jpg",
+        price: 129.90,
+        title: "Parenting - For Good Early Years",
+        author: "Bonnier",
+        description: "Curabitur lreaoreet nisl lorem in pellente e vidicus pannel impirus sadintas velisurabitur lreaoreet nisl lorem in pellente vidicus pannel.",
+        rating: 4.5
+    };
+    
+    $bbBookBlock = $("#bb-bookblock");
+    
+    var $bbItem = '<div class="bb-item">' 
+            + '<div class="bb-custom-content">' 
+            + '<div class="slide-inner">' 
+            + '<div class="span4 book-holder">' 
+            + '<a href="book-detail.html">' 
+            + '<img src='+ book.imgUrl +' alt="Book" />'
+            + '</a>'
+            + '<div class="cart-price"> <a class="cart-btn2" href="cart.html">Add to Cart</a> <span class="price">$' + book.price + '</span> </div>'
+            + '</div>'
+            + '<div class="span8 book-detail"><h2>' + book.title + '</h2>'
+            + '<strong class="title">by ' + book.author + '</strong> <span class="rating-bar"> <img src="images/raing-star2.png" alt="Rating Star" /> </span> <a href="book-detail.html" class="shop-btn">SHOP NOW</a>'
+            + '<div class="cap-holder"><p><img src="images/image27.png" alt="Best Choice" align="right"/> ' + book.description + ' </p><a href="book-detail.html">Read More</a> </div></div></div></div></div>';
+    
+    $featuredBooks = $(".slider1");      
+    
+    var $featuredItem = '<div class="slide"> <a href="book-detail.html"><img src="images/image05.jpg" alt="" class="pro-img"/></a> <span class="title"><a href="book-detail.html"> ' + book.title + ' </a></span> <span class="rating-bar"><img src="images/rating-star.png" alt="Rating Star"/></span>'
+            + '<div class="cart-price"> <a class="cart-btn2" href="cart.html">Add to Cart</a> <span class="price">$' + book.price + '</span> </div>'
+            + '</div>';
+             
+             
+    setTimeout(function() {
+        var bbItems = [];
+        var featuredItems = [];
+        for (var i = 0; i < 10; i++) {
+         bbItems.push($bbItem); 
+         featuredItems.push($featuredItem);
+        }
+        $bbBookBlock.append(bbItems);
+        $featuredBooks.append(featuredItems);
+    }, 2000);
+                   
+    
+    
+//    $.getJSON( "/books", function( data ) {
+//        var items = [];
+//        $.each( data, function( key, val ) {
+//            items.push( "<li id='" + key + "'>" + val + "</li>" );
+//        });
+// 
+//        $( "<ul/>", {
+//            "class": "my-new-list",
+//            html: items.join( "" )
+//        }).appendTo( "body" );
+//    });
+    
+    
+    
 /* BX slider 1*/
    if ($('.slider1').length){
 		$('.slider1').bxSlider({ slideWidth: 142, minSlides: 1, maxSlides: 8, slideMargin: 18,  speed: 1500  });

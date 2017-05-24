@@ -24,6 +24,7 @@
         <h:section class="main-slider">
           <h:div class="bb-custom-wrapper">
             <h:div id="bb-bookblock" class="bb-bookblock">
+                
               <h:div class="bb-item">
                 <h:div class="bb-custom-content">
                   <h:div class="slide-inner">
@@ -40,38 +41,9 @@
                   </h:div>
                 </h:div>
               </h:div>
-              <h:div class="bb-item">
-                <h:div class="bb-custom-content">
-                  <h:div class="slide-inner">
-                    <h:div class="span4 book-holder"> <h:a href="book-detail.html"><h:img src="images/image01.jpg" alt="Book" /></h:a>
-                      <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-                    </h:div>
-                    <h:div class="span8 book-detail">
-                      <h:h2>Parenting - For Early Years</h:h2>
-                      <h:strong class="title">by Bonnier</h:strong> <h:span class="rating-bar"> <h:img src="images/raing-star2.png" alt="Rating Star" /> </h:span> <h:a href="book-detail.html" class="shop-btn">SHOP NOW</h:a>
-                      <h:div class="cap-holder">
-                        <h:p><h:img src="images/image27.png" alt="Best Choice" align="right"/> Curabitur lreaoreet nisl lorem in pellente e vidicus pannel impirus sadintas velisurabitur lreaoreet nisl lorem in pellente vidicus pannel. </h:p>
-                        <h:a href="book-detail.html">Read More</h:a> </h:div>
-                    </h:div>
-                  </h:div>
-                </h:div>
-              </h:div>
-              <h:div class="bb-item">
-                <h:div class="bb-custom-content">
-                  <h:div class="slide-inner">
-                    <h:div class="span4 book-holder"> <h:a href="book-detail.html"><h:img src="images/image01.jpg" alt="Book" /></h:a>
-                      <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-                    </h:div>
-                    <h:div class="span8 book-detail">
-                      <h:h2>Parenting - For Early Years</h:h2>
-                      <h:strong class="title">by Bonnier</h:strong> <h:span class="rating-bar"> <h:img src="images/raing-star2.png" alt="Rating Star" /> </h:span> <h:a href="book-detail.html" class="shop-btn">SHOP NOW</h:a>
-                      <h:div class="cap-holder">
-                        <h:p><h:img src="images/image27.png" alt="Best Choice" align="right"/> Curabitur lreaoreet nisl lorem in pellente e vidicus pannel impirus sadintas velisurabitur lreaoreet nisl lorem in pellente vidicus pannel. </h:p>
-                        <h:a href="book-detail.html">Read More</h:a> </h:div>
-                    </h:div>
-                  </h:div>
-                </h:div>
-              </h:div>
+              
+             
+              
             </h:div>
           </h:div>
           <h:nav class="bb-custom-nav"> <h:a href="#" id="bb-nav-prev" class="left-arrow">Previous</h:a> <h:a href="#" id="bb-nav-next" class="right-arrow">Next</h:a> </h:nav>
@@ -119,15 +91,20 @@
           <h:span class="h-line"></h:span> 
         </h:div>
         <h:div class="slider1">
-          <h:div class="slide"> <h:a href="book-detail.html"><h:img src="images/image05.jpg" alt="" class="pro-img"/></h:a> <h:span class="title"><h:a href="book-detail.html">A Walk Across The Sun</h:a></h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span>
-            <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-          </h:div>
-          <h:div class="slide"> <h:a href="book-detail.html"><h:img src="images/image05.jpg" alt="" class="pro-img"/></h:a> <h:span class="title"><h:a href="book-detail.html">A Walk Across The Sun</h:a></h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span>
-            <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-          </h:div>
-          <h:div class="slide"> <h:a href="book-detail.html"><h:img src="images/image05.jpg" alt="" class="pro-img"/></h:a> <h:span class="title"><h:a href="book-detail.html">A Walk Across The Sun</h:a></h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span>
-            <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-          </h:div>
+          
+            <h:div class="slide"> 
+                <h:a href="book-detail.html">
+                    <h:img src="images/image05.jpg" alt="" class="pro-img"/>
+                </h:a> 
+                <h:span class="title">
+                    <h:a href="book-detail.html">A Walk Across The Sun</h:a>
+                </h:span> 
+                <h:span class="rating-bar">
+                    <h:img src="images/rating-star.png" alt="Rating Star"/>
+                </h:span>
+                <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
+            </h:div>
+          
         </h:div>
       </h:section>
     </h:section>
