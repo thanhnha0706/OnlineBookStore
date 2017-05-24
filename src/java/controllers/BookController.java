@@ -6,11 +6,14 @@
 package controllers;
 
 import dao.BookDAO;
+import dao.CategoryDAO;
 import dao.CustomerDAO;
 import entity.Book;
-import entity.Customer;
+import entity.Category;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,6 +29,14 @@ import services.MarshalService;
  * @author quyqu
  */
 public class BookController extends HttpServlet {
+    
+    private CategoryDAO dao;
+    private BookDAO bDao;
+    
+    public BookController() {
+        dao = new CategoryDAO(Category.class);
+        bDao = new BookDAO(Book.class);
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -64,6 +75,32 @@ public class BookController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String inputTitle = request.getParameter("inputTitle");
+        String inputAuthor = request.getParameter("inputAuthor");
+        String inputIsbn = request.getParameter("inputIsbn");
+        int inputPage = Integer.parseInt(request.getParameter("inputPage"));
+        String inputKeyword = request.getParameter("inputKeyword");
+        String inputDescription = request.getParameter("inputDescription");
+        //String inputReleaseDate = request.getParameter("inputReleaseDate");
+        String inputThumbnail = request.getParameter("inputThumbnail");
+        String inputPrice = request.getParameter("inputPrice");
+        String categoryId = "1";
+        
+        Book newBook = new Book();
+        newBook.setTitle(inputTitle);
+        newBook.setAuthor(inputAuthor);
+        newBook.setIsbn(inputIsbn);
+        newBook.setNumberOfPage(inputPage);
+        newBook.setKeyword(inputKeyword);
+        newBook.setShortDescription(inputDescription);
+        newBook.setReleaseDate(new Date());
+        newBook.setThumbnail(inputThumbnail);
+        newBook.setPrice(new BigDecimal(inputPrice));
+        newBook.setCategoryId(dao.findById(categoryId));
+        newBook.setBookId(java.util.UUID.randomUUID().toString());
+        bDao.insert(newBook);
+        
+        response.sendRedirect("addbook.zul");
         
     }
 

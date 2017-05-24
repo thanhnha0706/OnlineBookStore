@@ -12,7 +12,7 @@
 <zk xmlns:h="native">
   <!-- Start Main Wrapper -->
   <h:div class="wrapper">
-
+    
     
     <include src="/layout/header.zul" />
     
@@ -191,7 +191,7 @@
       <!-- Start Blog Section -->
       <h:section class="span9 blog-section">
         <h:div class="heading-bar">
-          <h:h2>Latest from the Blog</h:h2>
+          <h:h2>Latest from the ${info}</h:h2>
           <h:span class="h-line"></h:span> 
         </h:div>
         <h:div class="slider3">
