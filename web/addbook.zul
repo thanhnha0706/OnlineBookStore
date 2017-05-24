@@ -1,0 +1,80 @@
+
+<zk xmlns:h="native">
+    
+        <h:div class="wrapper">
+
+    
+    <include src="/layout/header.zul" />
+    
+        <h:section id="content-holder" class="container-fluid container" style="display: flex;">
+        <h:div class="span5 check-method-right" style="margin: 0 auto;"> 
+        <h:strong class="green-t">Register</h:strong>
+                    <h:form class="form-horizontal" method="post" action="books">
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputTitle">Title <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputTitle" name="inputTitle" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputAuthor">Author <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputAuthor" name="inputAuthor" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputIsbn">ISBN <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputIsbn" name="inputIsbn" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputPage">Number of Page <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="number" id="inputPage" name="inputPage" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputKeyword">Keyword <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputKeyword" name="inputKeyword" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputDescription">Description <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputDescription" name="inputDescription" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputReleaseDate">Release Date <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputReleaseDate" name="inputReleaseDate" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputThumbnail">Thumbnail <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputThumbnail" name="inputThumbnail" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
+                        <h:label class="control-label" for="inputPrice">Price <h:sup>*</h:sup></h:label>
+                        <h:div class="controls">
+                          <h:input type="text" id="inputPrice" name="inputPrice" placeholder=""/>
+                        </h:div>
+                      </h:div>
+                      <h:p><h:a href="#">Forgot your password?</h:a></h:p>
+                      <h:div class="control-group">
+                        <h:div class="controls">
+                          <h:button type="submit" class="more-btn">Register</h:button>
+                        </h:div>
+                      </h:div>
+                    </h:form>
+                    <h:p>Already registered? Please <h:a href="login.zul">log in</h:a>!</h:p>
+                  </h:div>
+    </h:section>    
+    <include src="/layout/footer.zul" />
+   
+        </h:div>
+</zk>

@@ -7,6 +7,7 @@ package dao;
 
 import dao.BaseDAO;
 import entity.Customer;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -23,7 +24,7 @@ public class CustomerDAO extends BaseDAO{
         return (List<Customer>)(Object)super.executeNamedQuery("Customer.findAll");
     }
 
-    public Customer findById(int Id) {
+    public Customer findById(String Id) {
         return (Customer)super.findObjectById(Id);
     }
 
@@ -37,5 +38,13 @@ public class CustomerDAO extends BaseDAO{
 
     public boolean delete(Customer customer) {
         return super.deleteObject(customer);
+    }
+    
+    
+    public Customer authenticate(String email, String password) {
+        Hashtable params = new Hashtable();
+        params.put("email", email);
+        params.put("password", password);
+        return (Customer) super.executeNamedQuery("Customer.authenticate", params);
     }
 }

@@ -9,17 +9,17 @@
             <!--<h:section class="row-fluid">-->
                 <h:div class="span5 check-method-right" style="margin: 0 auto"> 
                 <h:strong class="green-t">Login</h:strong>
-                <h:form class="form-horizontal">
+                <h:form class="form-horizontal" action="login" method="post">
                       <h:div class="control-group">
                         <h:label class="control-label" for="inputEmail">Email Address <h:sup>*</h:sup></h:label>
                         <h:div class="controls">
-                          <h:input type="text" id="inputEmail" placeholder=""/>
+                          <h:input type="text" id="inputEmail" name="inputEmail" placeholder=""/>
                         </h:div>
                       </h:div>
                       <h:div class="control-group">
                         <h:label class="control-label" for="inputPassword">Password <h:sup>*</h:sup></h:label>
                         <h:div class="controls">
-                          <h:input type="password" id="inputPassword" placeholder=""/>
+                          <h:input type="password" id="inputPassword" name="inputPassword" placeholder=""/>
                         </h:div>
                       </h:div>
                       <h:p><h:a href="#">Forgot your password?</h:a></h:p>

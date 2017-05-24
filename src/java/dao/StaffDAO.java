@@ -22,7 +22,7 @@ public class StaffDAO extends BaseDAO {
         return (List<Staff>)(Object)super.executeNamedQuery("Staff.findAll");
     }
 
-    public Staff findById(int Id) {
+    public Staff findById(String Id) {
         return (Staff)super.findObjectById(Id);
     }
 
