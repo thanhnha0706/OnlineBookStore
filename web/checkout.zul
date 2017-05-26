@@ -1,6 +1,6 @@
 
 <zk xmlns:h="native">
-    
+        <h:script type="text/javascript" src="js/checkout.js"></h:script><!-- Checkout -->
         <h:div class="wrapper">
 	
     <include src="/layout/header.zul" />
@@ -25,65 +25,29 @@
                     <h:form class="form-horizontal">
                         <h:ul class="billing-form">
                             <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputFirstname">First Name <h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputFirstname" placeholder=""/>
-                                </h:div>
-                              </h:div>
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputLastname">Last Name<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputLastname" placeholder=""/>
-                                </h:div>
-                              </h:div>
-                              
-                            </h:li>
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputEmail">Email Address<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputEmail" placeholder=""/>
-                                </h:div>
-                              </h:div>
+                                <h:h4 id="cus-name"></h:h4>
+                                <h:h4 id="cus-email"></h:h4>
                             </h:li>
                             <h:li>   
                               <h:div class="control-group">
                                 <h:label class="control-label" for="inputAddress">Address<h:sup>*</h:sup></h:label>
                                 <h:div class="controls">
-                                  <h:input type="text" id="inputAddress" placeholder="" class="address-field"/>
+                                  <h:input type="text" id="inputAddress" placeholder="" class="address-field" required="required" />
                                 </h:div>
                               </h:div>
                             </h:li>
-                               
-                              
                             <h:li>   
                               <h:div class="control-group">
                                 <h:label class="control-label" for="inputTelephone">Telephone <h:sup>*</h:sup></h:label>
                                 <h:div class="controls">
-                                  <h:input type="text" id="inputTelephone" placeholder=""/>
-                                </h:div>
-                                <h:label class="radio b-label">
-                                    <h:input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
-                                    Ship to this address 
-                                </h:label>
-                                <h:label class="radio b-label">
-                                    <h:input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-                                    different address 
-                                </h:label>
-                              </h:div>
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputFax">Fax<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputFax" placeholder="" />
-                                  <h:strong class="green-t">* Required Fields</h:strong>
+                                  <h:input type="text" id="inputTelephone" placeholder="" required="required" />
                                 </h:div>
                               </h:div>
                             </h:li>
                             <h:li>
                             	<h:div class="control-group">
                                 <h:div class="controls">
-                                  <h:button type="submit" class="more-btn">Continue</h:button>
+                                    <h:a href="#collapseTwo" type="submit" class="more-btn">Continue</h:a>
                                 </h:div>
                               </h:div>
                             </h:li>
@@ -93,85 +57,12 @@
               </h:div>
             </h:div>
             <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"> Payment Information </h:a> </h:div>
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"> Payment Method </h:a> </h:div>
               <h:div id="collapseTwo" class="accordion-body collapse">
                 <h:div class="accordion-inner">
-                	<h:form class="form-horizontal">
-                        <h:ul class="billing-form">
-                            <h:li>   
-                            	<h:div class="label-holder">
-                                	<h:label class="radio b-label">
-                                    <h:input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  />
-                                    Ship to this address 
-                                </h:label>
-                                <h:label class="radio b-label">
-                                    <h:input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-                                    different address 
-                                </h:label>
-                                </h:div>
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputCardname">Name on Card<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputCardname" placeholder=""/>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputCardtype">Credit Card Type <h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:select name="state" size="1">
-                                    <h:option  value="">Please select one</h:option>
-                                    <h:option  value="">Please select Two</h:option>
-                                    <h:option  value="">Please select Three</h:option>
-                                  </h:select>
-                                </h:div>
-                              </h:div>
-                            </h:li>                            
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputCreditcardnum">Credit Card Number  <h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputCreditcardnum" placeholder=""/>
-                                </h:div>
-                              </h:div>
-                              
-                            </h:li>
-                            <h:li>
-                            	<h:div class="control-group w-extra">
-                                <h:label class="control-label" for="inputExpirationdate">Expiration Date<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:select name="state" size="1" class="month-list">
-                                    <h:option  value="">Month</h:option>
-                                    <h:option value="">Month</h:option>
-                                    <h:option value="">Month</h:option>
-                                  </h:select>
-                                  <h:select name="state" size="1" class="year-list">
-                                    <h:option value="">Year</h:option>
-                                    <h:option value="">Year</h:option>
-                                    <h:option value="">Year</h:option>
-                                  </h:select>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputCardVerification"> Card Verification Number <h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputCardVerification" placeholder="" />
-                                  <h:strong class="green-t">* Required Fields</h:strong>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                        	<h:li>
-                            	<h:div class="control-group">
-                                <h:div class="controls">
-                                  <h:button type="submit" class="more-btn">Continue</h:button>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                        </h:ul>
-                    </h:form>
+                    <h:a id="payment">
+                        <h:img src="http://www.baokim.vn/developers/uploads/baokim_btn/thanhtoanantoan-l.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" ></h:img>
+                    </h:a>
                 </h:div>
               </h:div>
             </h:div>
@@ -179,41 +70,23 @@
               <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"> Order Review </h:a> </h:div>
               <h:div id="collapseThree" class="accordion-body collapse">
                 <h:div class="accordion-inner no-p">
-                  <h:table width="100%" border="0" cellpadding="14">
-                    <h:tr class="heading-bar-table">
+                  <h:table width="100%" border="0" cellpadding="14" id="preview">
+                    <h:tr class="heading-bar-table" id="t-head">
                       <h:th width="47%" align="left">Product Name</h:th>
                       <h:th width="18%">Price</h:th>
                       <h:th width="19%">Quantity</h:th>
                       <h:th width="16%">Subtotal </h:th>
                     </h:tr>
                     <h:tr>
-                      <h:td width="47%" align="left"><h:a href="#">The Kite Runner</h:a> by Khalid Housseni</h:td>
-                      <h:td width="18%">$1,680.00 </h:td>
-                      <h:td width="19%">1 </h:td>
-                      <h:td width="16%">$1,680.00 </h:td>
-                    </h:tr>
-                    <h:tr>
-                      <h:td align="left"><h:a href="#">The Kite Runner</h:a> by Khalid Housseni </h:td>
-                      <h:td>$60.50 </h:td>
-                      <h:td>1 </h:td>
-                      <h:td>$1,680.00 </h:td>
-                    </h:tr>
-                    <h:tr>
-                      <h:td align="left"><h:a href="#">The Kite Runner</h:a> by Khalid Housseni </h:td>
-                      <h:td>$180.20 </h:td>
-                      <h:td>1</h:td>
-                      <h:td>$1,680.00 </h:td>
-                    </h:tr>
-                    <h:tr>
                       <h:td colspan="3" align="right">
                       	<h:p>Subtotal</h:p>
-                        <h:p>Shipping + Handing (Flat rate: Fixed $25.00)</h:p>
+                        <h:p>Shipping </h:p>
                         <h:p>Grand Total</h:p>                      
                       </h:td>
                       <h:td>
-                      	<h:p>$1,921.00</h:p>
-                        <h:p>$25.00</h:p>
-                        <h:p>$1,946.00</h:p>                      
+                      	<h:p id="subtotal"></h:p>
+                        <h:p id="shipping"></h:p>
+                        <h:p id="grandtotal"></h:p>                      
                       </h:td>
                     </h:tr>
                     <h:tr>
@@ -226,7 +99,7 @@
             </h:div>
             
             <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Process to Payment </h:a> </h:div>
+              <h:div class="accordion-heading"> <h:a class="accordion-toggle sent-otp" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Process to Payment </h:a> </h:div>
               <h:div id="collapseFour" class="accordion-body collapse">
                 <h:div class="accordion-inner">
                 	<h:form class="form-horizontal">
