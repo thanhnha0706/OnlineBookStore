@@ -88,6 +88,14 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
         <servlet-name>CartController</servlet-name>
         <servlet-class>controllers.CartController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OtpController</servlet-name>
+        <servlet-class>controllers.OtpController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerController</servlet-name>
+        <servlet-class>controllers.CustomerController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>zkLoader</servlet-name>
         <url-pattern>*.zul</url-pattern>
@@ -200,6 +208,14 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
     <servlet-mapping>
         <servlet-name>CartController</servlet-name>
         <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OtpController</servlet-name>
+        <url-pattern>/otp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerController</servlet-name>
+        <url-pattern>/customers</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>60</session-timeout>

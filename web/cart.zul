@@ -1,7 +1,7 @@
 
 <zk xmlns:h="native">
     <include src="/layout/header.zul" />
-    
+    <h:script type="text/javascript" src="js/pay.js"></h:script><!-- Pay -->
     <h:div class="wrapper">
         
         <!-- Start Main Content Holder -->
@@ -15,20 +15,18 @@
             	<h:a href="checkout.zul" class="more-btn">proceed to checkout</h:a>
             </h:div>
             <h:div class="cart-table-holder">
-            	<h:table width="100%" border="0" cellpadding="10">
+            	<h:table id="cart" width="100%" border="0" cellpadding="10">
                   <h:tr>
                     <h:th width="14%"> </h:th>
                     <h:th width="43%" align="left">Product Name</h:th>
-                    <h:th width="6%"></h:th>
                     <h:th width="10%">Unit Price</h:th>
                     <h:th width="10%">Quantity</h:th>
-                    <h:th width="12%">Subtota</h:th>
+                    <h:th width="12%">Subtotal</h:th>
                     <h:th width="5%"> </h:th>
                   </h:tr>
                   <h:tr bgcolor="#FFFFFF" class=" product-detail">
                     <h:td valign="top"><h:img src="images/image07.jpg" /></h:td>
                     <h:td valign="top">The Kite Runner by Khalid Hosseini</h:td>
-                    <h:td align="center" valign="top"><h:a href="#">Edit</h:a></h:td>
                     <h:td align="center" valign="top">$295.00</h:td>
                     <h:td align="center" valign="top"><h:input name="" type="text" value="1" /></h:td>
                     <h:td align="center" valign="top">$295.00</h:td>

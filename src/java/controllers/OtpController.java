@@ -5,12 +5,8 @@
  */
 package controllers;
 
-import dao.BookDAO;
-import entity.Book;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -18,17 +14,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.xml.bind.JAXBException;
-import services.MarshalService;
+import org.json.JSONException;
+import services.SecurityService;
 
-public class CartController extends HttpServlet {
+/**
+ *
+ * @author quyqu
+ */
+public class OtpController extends HttpServlet {
 
-    private BookDAO dao;
-    private MarshalService mar;
+    private SecurityService ser;
 
-    public CartController() {
-        dao = new BookDAO(Book.class);
-        mar = new MarshalService();
+    public OtpController() {
+        ser = new SecurityService();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -43,38 +41,19 @@ public class CartController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getParameter("action");
-        HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
-        if (action != null) {
-            if (action.equals("add")) {
-                List<Book> cart = (List<Book>) session.getAttribute("cart");
-                if (cart == null) {
-                    cart = new ArrayList<Book>();
-                    session.setAttribute("cart", cart);
-                }
-                String bookId = request.getParameter("bookId");
-                Book book = dao.findById(bookId);
-                if (book != null) {
-                    cart.add(book);
-                }
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                out.println("ok");
-            } else if (action.equals("get")) {
-                List<Book> cart = (List<Book>) session.getAttribute("cart");
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                if(cart == null) {
-                    cart = new ArrayList<Book>();
-                }
-                try {
-                    out.println(this.mar.marshal(cart, Book.class));
-                } catch (JAXBException ex) {
-                    Logger.getLogger(CartController.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
 
+        HttpSession session = request.getSession();
+        String sessionOtp = (String) session.getAttribute("otp");
+        if (session.getAttribute("otp") == null) {
+            String otp = ser.getOtp();
+            session.setAttribute("otp", otp);
+            try {
+                this.ser.otpv2(otp);
+                out.println("ok");
+            } catch (JSONException ex) {
+                Logger.getLogger(OtpController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
@@ -89,7 +68,18 @@ public class CartController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
+        String opt = request.getParameter("otp");
+        String sessionOtp = (String) session.getAttribute("otp");
 
+        if (sessionOtp.equals(opt)) {
+            out.println("ok");
+        } else {
+            out.println("error");
+        }
     }
 
     /**
