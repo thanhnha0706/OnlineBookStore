@@ -5,13 +5,13 @@
  */
 package controllers;
 
-import entity.Customer;
+import models.Customer;
 import dao.CustomerDAO;
 import dao.CustomerOrderDAO;
 import dao.StaffDAO;
-import entity.Book;
-import entity.CustomerOrder;
-import entity.Staff;
+import models.Book;
+import models.CustomerOrder;
+import models.Staff;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;

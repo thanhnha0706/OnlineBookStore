@@ -16,7 +16,6 @@
                             <h:div class="bb-custom-wrapper">
                                 <h:div id="bb-bookblock" class="bb-bookblock">
                                     
-                                        
                                         <h:div class="bb-item" forEach="${vm.books}">
                                             <h:div class="bb-custom-content">
                                                 <h:div class="slide-inner">
@@ -46,11 +45,6 @@
                                             </h:div>
                                         </h:div>
                                         
-                
-                                    
-              
-             
-              
                                 </h:div>
                             </h:div>
                             <h:nav class="bb-custom-nav"> 
@@ -69,7 +63,7 @@
                 </h:section>
     
     
-                <h:section class="row-fluid ">
+                <h:section class="row-fluid" id="salePanel">
                     <h:figure class="span4 s-product" forEach="${vm.books}">
                         <h:div class="s-product-img">
                             <h:a href="book-detail.html">

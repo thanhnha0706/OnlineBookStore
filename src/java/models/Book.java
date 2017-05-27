@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entity;
+package models;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -189,7 +189,7 @@ public class Book implements Serializable, Cloneable {
     public void setCategoryId(Category categoryId) {
         this.categoryId = categoryId;
     }
-
+        
     @Override
     public int hashCode() {
         int hash = 0;

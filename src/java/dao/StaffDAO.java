@@ -5,13 +5,9 @@
  */
 package dao;
 
-import entity.Staff;
+import models.Staff;
 import java.util.List;
 
-/**
- *
- * @author quyqu
- */
 public class StaffDAO extends BaseDAO {
     
     public StaffDAO(Class classe) {

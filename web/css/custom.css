@@ -1,0 +1,9 @@
+
+#salePanel figure:nth-child(4n+0) {
+    margin-left: 0;
+}
+
+.c-btn {
+    width: 120px;
+}
+

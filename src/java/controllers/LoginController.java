@@ -6,7 +6,7 @@
 package controllers;
 
 import dao.CustomerDAO;
-import entity.Customer;
+import models.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
@@ -17,31 +17,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.xml.bind.JAXBException;
+import services.MarshalService;
 import services.SecurityService;
 
 public class LoginController extends HttpServlet {
 
     private CustomerDAO dao;
     private SecurityService ser;
+    private MarshalService mar;
 
     public LoginController() {
         dao = new CustomerDAO(Customer.class);
         ser = new SecurityService();
+        mar = new MarshalService();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request servlet request
-     * @param response servlet response
+     * @param req servlet request
+     * @param res servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse res)
+            throws ServletException, IOException {    
     }
 
     /**
@@ -60,9 +63,11 @@ public class LoginController extends HttpServlet {
             String inputPassword = request.getParameter("inputPassword");
             HttpSession session = request.getSession();
             if (inputEmail != null && inputPassword != null) {
+                
                 Customer cus = dao.authenticate(inputEmail, ser.hashPassword(inputPassword));
+               
                 if (cus != null) {
-                    session.setAttribute("cus", cus);
+                    session.setAttribute("customer", cus);
                     response.sendRedirect("/onlinebookstore");
                 } else {
                     response.sendRedirect("register.zul");

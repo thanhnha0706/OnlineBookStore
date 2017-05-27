@@ -114,7 +114,9 @@
 <!-- JS Files Start -->
 
 <h:script type="text/javascript" src="js/lib.js"></h:script> <!-- lib Js --> 
+<h:script type="text/javascript" src="js/lodash.min.js"></h:script> <!-- lodash Js --> 
 <h:script type="text/javascript" src="js/index.js"></h:script> <!-- for index page -->
+<h:script type="text/javascript" src="js/cart.js"></h:script><!-- Cart -->
 <h:script type="text/javascript" src="js/modernizr.js"></h:script><!-- Modernizr -->
 <h:script type="text/javascript" src="js/easing.js"></h:script><!-- Easing js -->
 <h:script type="text/javascript" src="js/bs.js"></h:script><!-- Bootstrap -->

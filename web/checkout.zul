@@ -1,149 +1,187 @@
 
 <zk xmlns:h="native">
-        <h:script type="text/javascript" src="js/checkout.js"></h:script><!-- Checkout -->
-        <h:div class="wrapper">
-	
-    <include src="/layout/header.zul" />
-       
-    <!-- Start Main Content Holder -->
-  <h:section id="content-holder" class="container-fluid container">
-    <h:section class="row-fluid m-bottom">
-      <h:div class="heading-bar">
-        <h:h2>Checkout</h:h2>
-        <h:span class="h-line"></h:span> 
-      </h:div>
-      <!-- Start Main Content -->
-      <!--<h:section class="checkout-holder">-->
-        <h:section class="span12 first">
-          <!-- Start Accordian Section -->
-          <h:div class="accordion" id="accordion2">
-            
-            <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"> Shipping Information </h:a> </h:div>
-              <h:div id="collapseOne" class="accordion-body collapse in">
-                <h:div class="accordion-inner"> 
-                    <h:form class="form-horizontal">
-                        <h:ul class="billing-form">
-                            <h:li>   
-                                <h:h4 id="cus-name"></h:h4>
-                                <h:h4 id="cus-email"></h:h4>
-                            </h:li>
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputAddress">Address<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputAddress" placeholder="" class="address-field" required="required" />
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputTelephone">Telephone <h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="inputTelephone" placeholder="" required="required" />
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                            <h:li>
-                            	<h:div class="control-group">
-                                <h:div class="controls">
-                                    <h:a href="#collapseTwo" type="submit" class="more-btn">Continue</h:a>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                        </h:ul>
-                    </h:form>
-                </h:div>
-              </h:div>
-            </h:div>
-            <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"> Payment Method </h:a> </h:div>
-              <h:div id="collapseTwo" class="accordion-body collapse">
-                <h:div class="accordion-inner">
-                    <h:a id="payment">
-                        <h:img src="http://www.baokim.vn/developers/uploads/baokim_btn/thanhtoanantoan-l.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" ></h:img>
-                    </h:a>
-                </h:div>
-              </h:div>
-            </h:div>
-            <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"> Order Review </h:a> </h:div>
-              <h:div id="collapseThree" class="accordion-body collapse">
-                <h:div class="accordion-inner no-p">
-                  <h:table width="100%" border="0" cellpadding="14" id="preview">
-                    <h:tr class="heading-bar-table" id="t-head">
-                      <h:th width="47%" align="left">Product Name</h:th>
-                      <h:th width="18%">Price</h:th>
-                      <h:th width="19%">Quantity</h:th>
-                      <h:th width="16%">Subtotal </h:th>
-                    </h:tr>
-                    <h:tr>
-                      <h:td colspan="3" align="right">
-                      	<h:p>Subtotal</h:p>
-                        <h:p>Shipping </h:p>
-                        <h:p>Grand Total</h:p>                      
-                      </h:td>
-                      <h:td>
-                      	<h:p id="subtotal"></h:p>
-                        <h:p id="shipping"></h:p>
-                        <h:p id="grandtotal"></h:p>                      
-                      </h:td>
-                    </h:tr>
-                    <h:tr>
-                      <h:td colspan="3" align="left">Forgot an items? Edit your cart</h:td>
-                      <h:td><h:a href="#" class="more-btn">Process to payment</h:a> </h:td>
-                    </h:tr>
-                  </h:table>
-                </h:div>
-              </h:div>
-            </h:div>
-            
-            <h:div class="accordion-group">
-              <h:div class="accordion-heading"> <h:a class="accordion-toggle sent-otp" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Process to Payment </h:a> </h:div>
-              <h:div id="collapseFour" class="accordion-body collapse">
-                <h:div class="accordion-inner">
-                	<h:form class="form-horizontal">
-                        <h:ul class="billing-form">
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:label class="control-label" for="inputCardname">We've sent an OTP to your phone number. Please enter the code here!<h:sup>*</h:sup></h:label>
-                                <h:div class="controls">
-                                  <h:input type="text" id="otpCode" placeholder="Enter OTP here"/>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                                                       
-                            <h:li>   
-                              <h:div class="control-group">
-                                <h:div class="controls">
-                                  <h:strong class="green-t">* Required Fields</h:strong>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                        	<h:li>
-                            	<h:div class="control-group">
-                                <h:div class="controls">
-                                  <h:button type="submit" id="verify" class="more-btn">Verify</h:button>
-                                </h:div>
-                              </h:div>
-                            </h:li>
-                        </h:ul>
-                    </h:form>
-                </h:div>
-              </h:div>
-            </h:div>
-            
-          </h:div>
-          <!-- End Accordian Section -->
-        </h:section>
-        
-      </h:section>
-      <!-- End Main Content -->
-    </h:section>
-  <!--</h:section>-->
-  <!-- End Main Content Holder -->
     
-    <include src="/layout/footer.zul" />
-      </h:div>
+    <h:script type="text/javascript" src="js/checkout.js"></h:script><!-- Checkout -->
+    <h:div class="wrapper">
+	
+        <include src="/layout/header.zul" />
+       
+        <!-- Start Main Content Holder -->
+        <h:section id="content-holder" class="container-fluid container">
+            <h:section class="row-fluid m-bottom">
+                <h:div class="heading-bar">
+                    <h:h2>Checkout</h:h2>
+                    <h:span class="h-line"></h:span> 
+                </h:div>
+                <!-- Start Main Content -->
+                <!--<h:section class="checkout-holder">-->
+                <h:section class="span12 first">
+                    <!-- Start Accordian Section -->
+                    <h:div class="accordion" id="accordion2">
+            
+                        <h:div class="accordion-group">
+                            <h:div class="accordion-heading"> 
+                                <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"> Shipping Information </h:a> 
+                            </h:div>
+                            <h:div id="collapseOne" class="accordion-body collapse in">
+                                <h:div class="accordion-inner"> 
+                                    <h:form class="form-horizontal">
+                                        <h:ul class="billing-form">
+                                            <h:li>   
+                                                <h:div class="control-group">
+                                                    <h:label class="control-label" for="inputAddress">Name<h:sup>*</h:sup></h:label>
+                                                    <h:div class="controls">
+                                                        <h:input type="text" id="customerName" placeholder="" required="required" disabled="disabled" />
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                            <h:li>   
+                                                <h:div class="control-group">
+                                                    <h:label class="control-label" for="inputAddress">Email<h:sup>*</h:sup></h:label>
+                                                    <h:div class="controls">
+                                                        <h:input type="text" id="customerEmail" placeholder="" required="required" disabled="disabled" />
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                            <h:li>   
+                                                <h:div class="control-group">
+                                                    <h:label class="control-label" for="inputAddress">Address<h:sup>*</h:sup></h:label>
+                                                    <h:div class="controls">
+                                                        <h:input type="text" id="inputAddress" placeholder="" class="address-field" required="required" />
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                            <h:li>   
+                                                <h:div class="control-group">
+                                                    <h:label class="control-label" for="inputTelephone">Telephone <h:sup>*</h:sup></h:label>
+                                                    <h:div class="controls">
+                                                        <h:input type="text" id="inputTelephone" placeholder="" required="required" />
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                            <h:li>
+                                                <h:div class="control-group">
+                                                    <h:div class="controls">
+                                                        <h:a class="more-btn" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" type="submit">Continue</h:a>
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                        </h:ul>
+                                    </h:form>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+            
+                        <h:div class="accordion-group">
+                            <h:div class="accordion-heading"> 
+                                <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"> Order Review </h:a> 
+                            </h:div>
+                            <h:div id="collapseTwo" class="accordion-body collapse">
+                                <h:div class="accordion-inner no-p">
+                                    <h:table width="100%" border="0" cellpadding="14" id="preview">
+                                        <h:tr class="heading-bar-table" id="checkoutOverview">
+                                            <h:th width="47%" align="left">Product Name</h:th>
+                                            <h:th width="18%">Price</h:th>
+                                            <h:th width="19%">Quantity</h:th>
+                                            <h:th width="16%">Subtotal </h:th>
+                                        </h:tr>
+                                        <h:tr>
+                                            <h:td colspan="3" align="right">
+                                                <h:p>Subtotal</h:p>
+                                                <h:p>Shipping </h:p>
+                                                <h:p>Grand Total</h:p>                      
+                                            </h:td>
+                                            <h:td>
+                                                <h:p id="subtotal"></h:p>
+                                                <h:p id="shipping"></h:p>
+                                                <h:p id="grandtotal"></h:p>                      
+                                            </h:td>
+                                        </h:tr>
+                                        <h:tr>
+                                            <h:td colspan="3" align="left">Forgot an items? <h:a href="cart.zul">Edit your cart</h:a></h:td>
+                                            <h:td>
+                                                <h:a data-toggle="collapse" data-parent="#accordion2" class="more-btn" href="#collapseThree">Choose Payment Method</h:a> 
+                                            </h:td>
+                                        </h:tr>
+                                    </h:table>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+                        
+                        <h:div class="accordion-group">
+                            <h:div class="accordion-heading"> 
+                                <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"> Payment Method </h:a> 
+                            </h:div>
+                            <h:div id="collapseThree" class="accordion-body collapse">
+                                <h:div class="accordion-inner">
+                                    
+                                    <h:table width="100%" border="0" cellpadding="14">
+                                        <h:tr>
+                                            <h:td>
+                                                <h:a id="payment">
+                                                    <h:img src="http://www.baokim.vn/developers/uploads/baokim_btn/thanhtoanantoan-l.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" ></h:img>
+                                                </h:a>                    
+                                            </h:td>
+                                        </h:tr>
+                                        <h:tr>
+                                            <h:td>
+                                                <h:a data-toggle="collapse" data-parent="#accordion2" class="more-btn" href="#collapseFour">Process to Payment</h:a> 
+                                            </h:td>
+                                        </h:tr>
+                                    </h:table>
+                                    
+                                </h:div>
+                            </h:div>
+                        </h:div>
+            
+                        <h:div class="accordion-group">
+                            <h:div class="accordion-heading"> 
+                                <h:a class="accordion-toggle sent-otp" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Process to Payment </h:a> 
+                            </h:div>
+                            <h:div id="collapseFour" class="accordion-body collapse">
+                                <h:div class="accordion-inner">
+                                    <h:form class="form-horizontal">
+                                        <h:ul class="billing-form">
+                                            <h:li>   
+                                                <h:div class="control-group">
+                                                    <h:label class="control-label" for="inputCardname">We've sent an OTP to your phone number. <h:br/>Please enter the code here!<h:sup>*</h:sup></h:label>
+                                                    <h:div class="controls">
+                                                        <h:input type="text" id="otpCode" placeholder="Enter OTP here"/>
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                                       
+                                            <h:li>   
+                                                <h:div class="control-group">
+                                                    <h:div class="controls">
+                                                        <h:strong class="green-t">* Required Fields</h:strong>
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                            <h:li>
+                                                <h:div class="control-group">
+                                                    <h:div class="controls">
+                                                        <h:button type="submit" id="verify" class="more-btn">Verify</h:button>
+                                                    </h:div>
+                                                </h:div>
+                                            </h:li>
+                                        </h:ul>
+                                    </h:form>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+            
+                    </h:div>
+                    <!-- End Accordian Section -->
+                </h:section>
+        
+            </h:section>
+            <!-- End Main Content -->
+        </h:section>
+        <!--</h:section>-->
+        <!-- End Main Content Holder -->
+    
+        <include src="/layout/footer.zul" />
+    </h:div>
 
 </zk>

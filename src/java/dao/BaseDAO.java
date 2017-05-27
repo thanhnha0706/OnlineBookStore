@@ -21,11 +21,7 @@ import org.eclipse.persistence.jpa.JpaEntityManager;
 import org.eclipse.persistence.queries.ReadAllQuery;
 import org.eclipse.persistence.queries.StoredProcedureCall;
 
-/**
- *
- * @author quyqu
- * @param <T>
- */
+
 public abstract class BaseDAO<T> {
 
     protected EntityManagerFactory factory = Persistence.createEntityManagerFactory("OnlineBookStorePU");

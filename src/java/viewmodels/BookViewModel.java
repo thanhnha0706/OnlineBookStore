@@ -6,7 +6,7 @@
 package viewmodels;
 
 import dao.BookDAO;
-import entity.Book;
+import models.Book;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

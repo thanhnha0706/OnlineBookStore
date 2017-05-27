@@ -6,7 +6,7 @@
 package controllers;
 
 import dao.BookDAO;
-import entity.Book;
+import models.Book;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -47,6 +47,8 @@ public class CartController extends HttpServlet {
         HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
         if (action != null) {
+            
+            // add a book to cart
             if (action.equals("add")) {
                 List<Book> cart = (List<Book>) session.getAttribute("cart");
                 if (cart == null) {
@@ -59,7 +61,7 @@ public class CartController extends HttpServlet {
                     cart.add(book);
                 }
                 response.sendRedirect("booklist.zul");
-            } else if (action.equals("get")) {
+            } else if (action.equals("get")) {              
                 List<Book> cart = (List<Book>) session.getAttribute("cart");
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
@@ -72,7 +74,26 @@ public class CartController extends HttpServlet {
                     Logger.getLogger(CartController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-
+            
+            // delete a book from cart 
+            else if (action.equals("delete")) {
+                List<Book> cart = (List<Book>) session.getAttribute("cart");
+                List<Book> newCart = new ArrayList<Book>();
+                if (cart != null) {
+                    String bookId = request.getParameter("bookId");
+                    for (Book book: cart) {
+                        if (!book.getBookId().equals(bookId)) {
+                            newCart.add(book);
+                        }
+                    }
+                }
+                
+                // save it to session
+                session.setAttribute("cart", newCart);
+                
+                // redirect to cart page
+                response.sendRedirect("cart.zul");
+            }
         }
     }
 
