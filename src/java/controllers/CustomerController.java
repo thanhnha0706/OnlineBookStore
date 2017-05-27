@@ -21,36 +21,53 @@ import javax.servlet.http.HttpSession;
 import javax.xml.bind.JAXBException;
 import services.MarshalService;
 
-/**
- *
- * @author quyqu
- */
 public class CustomerController extends HttpServlet {
+
+    private MarshalService mar;
+
+    public CustomerController() {
+        mar = new MarshalService();
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request servlet request
-     * @param response servlet response
+     * @param req servlet request
+     * @param res servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        Customer cus = (Customer) session.getAttribute("cus");
-        MarshalService m = new MarshalService();
-        PrintWriter out = response.getWriter();
-        
-        try {
-            out.println(m.marshal(cus, Customer.class));
-        } catch (JAXBException ex) {
-            Logger.getLogger(BookController.class.getName()).log(Level.SEVERE, null, ex);
+
+        String action = req.getParameter("action");
+
+        if (action.equals("verify")) {
+            
+            res.setContentType("Application/json");
+            HttpSession session = req.getSession();
+            PrintWriter out = res.getWriter();
+            Customer customer = (Customer) session.getAttribute("customer");
+            
+            // if the customer has not logged in
+            if (customer == null) {
+                customer = new Customer();
+            } 
+            // otherwise, hide its password
+            else {
+                customer.setPassword(null);
+            }
+
+            // respond
+            try {
+                out.println(mar.marshal(customer, Customer.class));
+            } catch (JAXBException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+
     }
 
     /**
@@ -64,7 +81,7 @@ public class CustomerController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
     }
 
     /**

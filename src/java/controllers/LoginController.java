@@ -44,26 +44,7 @@ public class LoginController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-
-        res.setContentType("Application/json");
-        HttpSession session = req.getSession();
-        PrintWriter out = res.getWriter();
-        Customer customer = (Customer) session.getAttribute("customer");
-        // hide password
-        customer.setPassword(null);
-        // if the customer has not logged in
-        if (customer == null) {
-            customer = new Customer();
-        }
-        
-        // respond
-        try {
-            out.println(mar.marshal(customer, Customer.class));
-        } catch (JAXBException ex) {
-            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+            throws ServletException, IOException {    
     }
 
     /**

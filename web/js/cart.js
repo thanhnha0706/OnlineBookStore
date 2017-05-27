@@ -30,8 +30,8 @@ $(document).ready(function () {
                     var quantity = books.length;
                     var book = books[0].book;
                     var subTotal = book.price * quantity;
-                   
-                    $cart.append('<tr bgcolor="#FFFFFF" class=" product-detail"><td valign="top"><img src="images/image07.jpg" /></td><td valign="top">' + book.title + '</td><td align="center" valign="top">' + book.price + '₫</td><td align="center" valign="top">' + quantity + '</td><td align="center" valign="top">' + subTotal + '₫</td><td align="center" valign="top"><a href="#"><i class="icon-trash"></i></a></td></tr>');
+                    var deleteUrl = "cart?action=delete&bookId=" + book.bookId;
+                    $cart.append('<tr bgcolor="#FFFFFF" class=" product-detail"><td valign="top"><img src="images/image07.jpg" /></td><td valign="top">' + book.title + '</td><td align="center" valign="top">' + book.price + '₫</td><td align="center" valign="top">' + quantity + '</td><td align="center" valign="top">' + subTotal + '₫</td><td align="center" valign="top"><a href="' + deleteUrl + '"><i class="icon-trash"></i></a></td></tr>');
 
                 });
                 

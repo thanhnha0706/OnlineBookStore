@@ -25,10 +25,6 @@ import javax.servlet.http.HttpSession;
 import org.json.JSONException;
 import services.SecurityService;
 
-/**
- *
- * @author quyqu
- */
 public class OtpController extends HttpServlet {
 
     private SecurityService ser;

@@ -189,7 +189,7 @@ public class Book implements Serializable, Cloneable {
     public void setCategoryId(Category categoryId) {
         this.categoryId = categoryId;
     }
-
+        
     @Override
     public int hashCode() {
         int hash = 0;

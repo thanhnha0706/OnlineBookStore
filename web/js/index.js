@@ -3,7 +3,7 @@ $(document).ready(function () {
     
     
     // check if user is logged in
-   $.get("login", function (data, status) {
+   $.get("customer?action=verify", function (data, status) {
        
        var customer = data.customer;
        // if the user is logged in

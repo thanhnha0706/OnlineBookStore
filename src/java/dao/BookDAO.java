@@ -9,10 +9,6 @@ import models.Book;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- *
- * @author quyqu
- */
 public class BookDAO extends BaseDAO implements Serializable, Cloneable {
     
     public BookDAO(Class classe) {

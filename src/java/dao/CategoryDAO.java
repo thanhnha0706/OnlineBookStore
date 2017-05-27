@@ -8,10 +8,6 @@ package dao;
 import models.Category;
 import java.util.List;
 
-/**
- *
- * @author quyqu
- */
 public class CategoryDAO extends BaseDAO{
     
     public CategoryDAO(Class classe) {

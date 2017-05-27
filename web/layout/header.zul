@@ -62,18 +62,13 @@
                             <h:a href="#">£</h:a> 
                             <h:a href="#">€</h:a>
                         </h:li>
-                        <h:li class="p-category">
-                            <h:a href="#">eng</h:a> 
-                            <h:a href="#">de</h:a> 
-                            <h:a href="#">fr</h:a>
-                        </h:li>
                     </h:ul>
           
           
                     <h:div class="c-btn"> 
                         <h:a href="cart.zul" class="cart-btn">Cart</h:a>
                         <h:div class="btn-group">
-                            <h:button id="cartHeaderButton" data-toggle="dropdown" class="btn btn-mini dropdown-toggle">0 item(s) - $0.00<h:span class="caret"></h:span></h:button>
+                            <h:button id="cartHeaderButton" data-toggle="dropdown" class="btn btn-mini dropdown-toggle">0 item(s) - 0₫<h:span class="caret"></h:span></h:button>
                             <h:ul class="dropdown-menu">
                                 <h:li>
                                     <h:a href="cart.zul">View Cart</h:a>
@@ -132,34 +127,34 @@
                     <h:div class="nav-collapse collapse">
                         <h:ul class="nav">
                             <h:li> 
-                                <h:a href="grid-view.html"><h:i class="icon-heart"></h:i> Features</h:a>
+                                <h:a href="booklist.zul"><h:i class="icon-heart"></h:i> Features</h:a>
                             </h:li>
                             <h:li> 
-                                <h:a href="grid-view.html">NOOK Books</h:a>
+                                <h:a href="#nook">NOOK Books</h:a>
                             </h:li>
                             <h:li>
-                                <h:a href="grid-view.html">Textbooks</h:a>
+                                <h:a href="#science">Science</h:a>
                             </h:li>
                             <h:li>
-                                <h:a href="grid-view.html">News stand</h:a>
+                                <h:a href="#newsstand">News stand</h:a>
                             </h:li>
                             <h:li>
-                                <h:a href="grid-view.html">Teens</h:a>
+                                <h:a href="#fiction">Fiction</h:a>
                             </h:li>
                             <h:li>
-                                <h:a href="grid-view.html">Toys and Games</h:a>
+                                <h:a href="#healthcare">Healthcare</h:a>
                             </h:li>
                             <h:li class="dropdown"> 
-                                <h:a class="dropdown-toggle" href="grid-view.html" data-toggle="dropdown">Movies and TV <h:b class="caret"></h:b> </h:a>
+                                <h:a class="dropdown-toggle" href="#technology" data-toggle="dropdown">Technology <h:b class="caret"></h:b> </h:a>
                                 <h:ul class="dropdown-menu">
                                     <h:li>
-                                        <h:a href="#">Submenu Detail Column 1</h:a>
+                                        <h:a href="#1">Submenu Detail Column 1</h:a>
                                     </h:li>
                                     <h:li>
-                                        <h:a href="#">Submenu Detail Column 2</h:a>
+                                        <h:a href="#2">Submenu Detail Column 2</h:a>
                                     </h:li>
                                     <h:li>
-                                        <h:a href="#">Submenu Detail Column 3</h:a>
+                                        <h:a href="#3">Submenu Detail Column 3</h:a>
                                     </h:li>
                                 </h:ul>
                             </h:li>

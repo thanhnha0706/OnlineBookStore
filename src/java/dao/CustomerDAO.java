@@ -10,10 +10,6 @@ import models.Customer;
 import java.util.Hashtable;
 import java.util.List;
 
-/**
- *
- * @author quyqu
- */
 public class CustomerDAO extends BaseDAO{
     
     public CustomerDAO(Class classe) {
@@ -45,6 +41,8 @@ public class CustomerDAO extends BaseDAO{
         Hashtable params = new Hashtable();
         params.put("email", email);
         params.put("password", password);
-        return (Customer) super.executeNamedQuery("Customer.authenticate", params);
+        
+        Customer customer = (Customer) super.executeNamedQuery("Customer.authenticate", params);
+        return customer;
     }
 }
