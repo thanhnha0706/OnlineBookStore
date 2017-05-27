@@ -1,7 +1,6 @@
 
 <zk xmlns:h="native">
     <include src="/layout/header.zul" />
-    <h:script type="text/javascript" src="js/cart.js"></h:script><!-- Pay -->
     <h:div class="wrapper">
         
         <!-- Start Main Content Holder -->
@@ -86,12 +85,8 @@
             	<h:div class="cart-option-box">
                     <h:table width="100%" border="0" cellpadding="10" class="total-payment">
                       <h:tr>
-                        <h:td width="55%" align="right"><h:strong>Subtotal</h:strong></h:td>
-                        <h:td width="45%" align="left">$295.00</h:td>
-                      </h:tr>
-                      <h:tr>
                         <h:td align="right"><h:strong class="large-f">GRAND TOTAL</h:strong></h:td>
-                        <h:td align="left"><h:strong class="large-f">$295.00</h:strong></h:td>
+                        <h:td align="left"><h:strong class="large-f" id="cartGrandTotal">$295.00</h:strong></h:td>
                       </h:tr>
                   </h:table>
                   <h:hr/>

@@ -73,7 +73,7 @@
                     <h:div class="c-btn"> 
                         <h:a href="cart.zul" class="cart-btn">Cart</h:a>
                         <h:div class="btn-group">
-                            <h:button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">0 item(s) - $0.00<h:span class="caret"></h:span></h:button>
+                            <h:button id="cartHeaderButton" data-toggle="dropdown" class="btn btn-mini dropdown-toggle">0 item(s) - $0.00<h:span class="caret"></h:span></h:button>
                             <h:ul class="dropdown-menu">
                                 <h:li>
                                     <h:a href="cart.zul">View Cart</h:a>
