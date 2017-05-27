@@ -22,10 +22,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.zkoss.zk.ui.Executions;
 
-/**
- *
- * @author quyqu
- */
 public class test extends HttpServlet {
 
     /**

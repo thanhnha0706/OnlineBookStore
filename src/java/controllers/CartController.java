@@ -21,10 +21,6 @@ import javax.servlet.http.HttpSession;
 import javax.xml.bind.JAXBException;
 import services.MarshalService;
 
-/**
- *
- * @author quyqu
- */
 public class CartController extends HttpServlet {
 
     private BookDAO dao;

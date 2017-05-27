@@ -24,10 +24,6 @@ import org.json.JSONObject;
 import sun.net.*;
 import sun.net.www.http.HttpClient;
 
-/**
- *
- * @author quyqu
- */
 public class SecurityService {
 
     private String RANDOM_SALT = "asdiuq8hnc8idsc";

@@ -112,7 +112,9 @@
 <!--</h:div>-->
 <!-- End Main Wrapper -->
 <!-- JS Files Start -->
-<h:script type="text/javascript" src="js/lib.js"></h:script><!-- lib Js -->
+
+<h:script type="text/javascript" src="js/lib.js"></h:script> <!-- lib Js --> 
+<h:script type="text/javascript" src="js/index.js"></h:script> <!-- for index page -->
 <h:script type="text/javascript" src="js/modernizr.js"></h:script><!-- Modernizr -->
 <h:script type="text/javascript" src="js/easing.js"></h:script><!-- Easing js -->
 <h:script type="text/javascript" src="js/bs.js"></h:script><!-- Bootstrap -->
@@ -123,6 +125,7 @@
 <h:script type="text/javascript" src="js/bookblock.js"></h:script><!-- Flip Slider -->
 <h:script type="text/javascript" src="js/custom.js"></h:script><!-- Custom js -->
 <h:script type="text/javascript" src="js/social.js"></h:script><!-- Social Icons -->
+
 <!-- JS Files End -->
 <h:script type="text/javascript">
   $(document).ready(function() {

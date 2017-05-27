@@ -589,12 +589,12 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 	-->
 	 	
 	<!-- ZK Demo properties loader -->
-	<listener>
+<!--	<listener>
 		<description>ZK Demo properties loader</description>
 		<listener-class>
 			org.zkoss.zksandbox.DemoWebAppInit
 		</listener-class>
-	</listener>
+	</listener>-->
 
 	<!-- Turn on if you want to debug by copying JavaScript files directly
 		to classpath
