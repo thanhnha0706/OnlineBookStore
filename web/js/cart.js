@@ -34,10 +34,11 @@ $(document).ready(function () {
                     $cart.append('<tr bgcolor="#FFFFFF" class=" product-detail"><td valign="top"><img src="images/image07.jpg" /></td><td valign="top">' + book.title + '</td><td align="center" valign="top">' + book.price + '₫</td><td align="center" valign="top">' + quantity + '</td><td align="center" valign="top">' + subTotal + '₫</td><td align="center" valign="top"><a href="' + deleteUrl + '"><i class="icon-trash"></i></a></td></tr>');
 
                 });
-                
+
                 // update the cart grand total
                 $cartGrandTotal.html(total + "₫");
             }
+
         }
 
     });

@@ -42,32 +42,25 @@ public class CustomerController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
 
-        String action = req.getParameter("action");
+        res.setContentType("Application/json");
+        HttpSession session = req.getSession();
+        PrintWriter out = res.getWriter();
+        Customer customer = (Customer) session.getAttribute("customer");
 
-        if (action.equals("verify")) {
-            
-            res.setContentType("Application/json");
-            HttpSession session = req.getSession();
-            PrintWriter out = res.getWriter();
-            Customer customer = (Customer) session.getAttribute("customer");
-            
-            // if the customer has not logged in
-            if (customer == null) {
-                customer = new Customer();
-            } 
-            // otherwise, hide its password
-            else {
-                customer.setPassword(null);
-            }
-
-            // respond
-            try {
-                out.println(mar.marshal(customer, Customer.class));
-            } catch (JAXBException ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        // if the customer has not logged in
+        if (customer == null) {
+            customer = new Customer();
+        } // otherwise, hide its password
+        else {
+            customer.setPassword(null);
         }
 
+        // respond
+        try {
+            out.println(mar.marshal(customer, Customer.class));
+        } catch (JAXBException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

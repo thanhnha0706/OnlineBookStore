@@ -40,16 +40,16 @@
                             <h:a href="/onlinebookstore" class="active">Home page</h:a>
                         </h:li>
                         <h:li>
-                            <h:a href="grid-view.html">Online Store</h:a>
+                            <h:a href="/onlinebookstore">Online Store</h:a>
                         </h:li>
                         <h:li>
-                            <h:a href="blog.html">Blog</h:a>
+                            <h:a href="#blog">Blog</h:a>
                         </h:li>
                         <h:li>
-                            <h:a href="blog-detail.html">News</h:a>
+                            <h:a href="#news">News</h:a>
                         </h:li>
                         <h:li>
-                            <h:a href="contact.html">Contact Us</h:a>
+                            <h:a href="#contact">Contact Us</h:a>
                         </h:li>
                     </h:ul>
                 </h:section>
@@ -58,9 +58,9 @@
                     <h:ul>
                         <h:li id="welcomeMessage">Welcome! <h:a href="login.zul">Login</h:a> or <h:a href="register.zul">Create an account</h:a></h:li>
                         <h:li class="p-category">
-                            <h:a href="#">$</h:a> 
-                            <h:a href="#">£</h:a> 
-                            <h:a href="#">€</h:a>
+                            <h:a href="#$">$</h:a> 
+                            <h:a href="#£">£</h:a> 
+                            <h:a href="#€">€</h:a>
                         </h:li>
                     </h:ul>
           
@@ -99,13 +99,13 @@
                 <h:section class="span8">
                     <h:ul class="top-nav2">
                         <h:li>
-                            <h:a href="checkout.html">My Account</h:a>
+                            <h:a href="#myaccount">My Account</h:a>
                         </h:li>
                         <h:li>
                             <h:a href="addBook.zul">Sell Your Book</h:a>
                         </h:li>
                         <h:li>
-                            <h:a href="order-recieved.html">Track Your Order</h:a>
+                            <h:a href="#trackorder">Track Your Order</h:a>
                         </h:li>
                     </h:ul>
                     <h:div class="search-bar">
@@ -148,13 +148,13 @@
                                 <h:a class="dropdown-toggle" href="#technology" data-toggle="dropdown">Technology <h:b class="caret"></h:b> </h:a>
                                 <h:ul class="dropdown-menu">
                                     <h:li>
-                                        <h:a href="#1">Submenu Detail Column 1</h:a>
+                                        <h:a href="#1">Technology in Healthcare</h:a>
                                     </h:li>
                                     <h:li>
-                                        <h:a href="#2">Submenu Detail Column 2</h:a>
+                                        <h:a href="#2">Technology in Geography</h:a>
                                     </h:li>
                                     <h:li>
-                                        <h:a href="#3">Submenu Detail Column 3</h:a>
+                                        <h:a href="#3">Technology in Biology</h:a>
                                     </h:li>
                                 </h:ul>
                             </h:li>
