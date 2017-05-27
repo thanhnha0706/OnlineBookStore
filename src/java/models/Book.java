@@ -27,6 +27,10 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ *
+ * @author quyqu
+ */
 @Entity
 @Table(name = "book")
 @XmlRootElement
@@ -42,8 +46,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Book.findByReleaseDate", query = "SELECT b FROM Book b WHERE b.releaseDate = :releaseDate"),
     @NamedQuery(name = "Book.findByThumbnail", query = "SELECT b FROM Book b WHERE b.thumbnail = :thumbnail"),
     @NamedQuery(name = "Book.findByPrice", query = "SELECT b FROM Book b WHERE b.price = :price")})
-public class Book implements Serializable, Cloneable {
-    
+public class Book implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -85,6 +89,9 @@ public class Book implements Serializable, Cloneable {
     @JoinColumn(name = "categoryId", referencedColumnName = "categoryId")
     @ManyToOne
     private Category categoryId;
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId")
+    @ManyToOne
+    private Customer customerId;
 
     public Book() {
     }
@@ -189,7 +196,15 @@ public class Book implements Serializable, Cloneable {
     public void setCategoryId(Category categoryId) {
         this.categoryId = categoryId;
     }
-        
+
+    public Customer getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Customer customerId) {
+        this.customerId = customerId;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -212,7 +227,7 @@ public class Book implements Serializable, Cloneable {
 
     @Override
     public String toString() {
-        return "entity.Book[ bookId=" + bookId + " ]";
+        return "models.Book[ bookId=" + bookId + " ]";
     }
     
 }

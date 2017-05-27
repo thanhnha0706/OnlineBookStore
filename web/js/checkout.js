@@ -42,7 +42,7 @@ $(document).ready(function () {
                 $("#subtotal").html(total + "₫");
                 grandTotal = shipping + total;
                 $("#grandtotal").html(grandTotal + "₫");
-                $("#payment").attr('href', 'https://www.baokim.vn/payment/product/version11?business=tranquy2512%40gmail.com&id=&order_description=Payment for cart&product_name=Cart number 152&product_price=' + grandTotal + '&product_quantity=1&total_amount=' + grandTotal + '&url_cancel=http://localhost:8080/onlinebookstore/success.zul&url_detail=das&url_success=ed');
+//                $("#payment").attr('href', 'https://www.baokim.vn/payment/product/version11?business=tranquy2512%40gmail.com&id=&order_description=Payment for cart&product_name=Cart number 152&product_price=' + grandTotal + '&product_quantity=1&total_amount=' + grandTotal + '&url_cancel=http://localhost:8080/onlinebookstore/success.zul&url_detail=das&url_success=ed');
             }
         }
     });

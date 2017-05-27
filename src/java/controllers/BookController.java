@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
+import models.Customer;
 import services.MarshalService;
 
 public class BookController extends HttpServlet {
@@ -94,6 +95,9 @@ public class BookController extends HttpServlet {
         newBook.setPrice(new BigDecimal(inputPrice));
         newBook.setCategoryId(dao.findById(categoryId));
         newBook.setBookId(java.util.UUID.randomUUID().toString());
+        
+        Customer customer = (Customer)request.getSession().getAttribute("customer");
+        newBook.setCustomerId(customer);
         bDao.insert(newBook);
         
         response.sendRedirect("addbook.zul");
