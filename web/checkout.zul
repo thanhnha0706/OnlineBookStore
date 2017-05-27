@@ -123,7 +123,7 @@
                         	<h:li>
                             	<h:div class="control-group">
                                 <h:div class="controls">
-                                  <h:button type="submit" class="more-btn">Verify</h:button>
+                                  <h:button type="submit" id="verify" class="more-btn">Verify</h:button>
                                 </h:div>
                               </h:div>
                             </h:li>

@@ -5,8 +5,16 @@
  */
 package controllers;
 
+import dao.CustomerOrderDAO;
+import dao.StaffDAO;
+import entity.Book;
+import entity.Customer;
+import entity.CustomerOrder;
+import entity.Staff;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -24,9 +32,13 @@ import services.SecurityService;
 public class OtpController extends HttpServlet {
 
     private SecurityService ser;
+    private CustomerOrderDAO dao;
+    private StaffDAO sdao;
 
     public OtpController() {
         ser = new SecurityService();
+        dao = new CustomerOrderDAO(CustomerOrder.class);
+        sdao = new StaffDAO(Staff.class);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -45,16 +57,17 @@ public class OtpController extends HttpServlet {
 
         HttpSession session = request.getSession();
         String sessionOtp = (String) session.getAttribute("otp");
-        if (session.getAttribute("otp") == null) {
-            String otp = ser.getOtp();
-            session.setAttribute("otp", otp);
-            try {
-                this.ser.otpv2(otp);
-                out.println("ok");
-            } catch (JSONException ex) {
-                Logger.getLogger(OtpController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        //if (session.getAttribute("otp") == null) {
+        String otp = ser.getOtp();
+        String phone = "01267698452";
+        session.setAttribute("otp", otp);
+        //try {
+        //this.ser.otpv2(otp + "-" + phone);
+        out.println(otp);
+//            } catch (JSONException ex) {
+//                Logger.getLogger(OtpController.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+        //}
     }
 
     /**
@@ -68,7 +81,7 @@ public class OtpController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("application/json");
+        //response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
@@ -76,10 +89,30 @@ public class OtpController extends HttpServlet {
         String sessionOtp = (String) session.getAttribute("otp");
 
         if (sessionOtp.equals(opt)) {
-            out.println("ok");
+            CustomerOrder customerOrder = this.initOrder(request);
+            String link = "https://www.baokim.vn/payment/product/version11?business=tranquy2512%40gmail.com&id=&order_description=Payment for cart&product_name=Cart number 152&product_price=" + customerOrder.getTotalAmount() + "&product_quantity=1&total_amount=" + customerOrder.getTotalAmount() + "&url_cancel=http://localhost:8080/onlinebookstore/success.zul&url_detail=das&url_success=ed";
+            out.println(link);
         } else {
             out.println("error");
         }
+    }
+
+    private CustomerOrder initOrder(HttpServletRequest request) {
+        Customer cus = (Customer) request.getSession().getAttribute("cus");
+        CustomerOrder order = new CustomerOrder();
+        order.setOrderDate(new Date());
+        order.setCustomerId(cus);
+        order.setShippingAddress(request.getParameter("inputAddress"));
+        order.setShippingPhone(request.getParameter("inputTelephone"));
+        order.setTax(0);
+        order.setOrderId(java.util.UUID.randomUUID().toString());
+        order.setTotalAmount(Float.parseFloat(request.getParameter("total")));
+        order.setStaffId(sdao.findById("1"));
+        List<Book> bookList = (List<Book>) request.getSession().getAttribute("cart");
+        
+        order.setBookList(bookList);
+        
+        return dao.insert(order);
     }
 
     /**

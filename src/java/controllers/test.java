@@ -7,8 +7,14 @@ package controllers;
 
 import entity.Customer;
 import dao.CustomerDAO;
+import dao.CustomerOrderDAO;
+import dao.StaffDAO;
+import entity.Book;
+import entity.CustomerOrder;
+import entity.Staff;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,20 +42,29 @@ public class test extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            CustomerDAO dao = new CustomerDAO(Customer.class);
-                List<Customer> a = dao.findAll();
-   
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet test</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet test at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet test at " + a.get(0).getCustomerId() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            CustomerDAO cdao = new CustomerDAO(Customer.class);
+            CustomerOrderDAO dao = new CustomerOrderDAO(CustomerOrder.class);
+            StaffDAO sdao = new StaffDAO(Staff.class);
+            Customer cus = (Customer) cdao.findById("771a8d1c-352f-481a-9904-bcb7ba46039c");
+            if(cus == null){
+                out.println("sad");
+            }
+        CustomerOrder order = new CustomerOrder();
+//        order.setOrderDate(null);
+//        order.setCustomerId(cus);
+//        order.setShippingAddress("ss");
+//        order.setShippingPhone("dsa");
+//        order.setTax(11);
+        order.setOrderId("sad");
+//        //order.setTotalAmount((float)110.2);
+//        if(sdao.findById("1") == null) {
+//            out.println("ssssss");
+//        }        order.setStaffId(sdao.findById("1"));
+//        List<Book> bookList = (List<Book>) request.getSession().getAttribute("cart");
+//        
+//        //order.setBookList(bookList);
+        
+       dao.insert(order);
         } finally {
             out.close();
         }

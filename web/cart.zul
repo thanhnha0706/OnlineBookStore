@@ -24,14 +24,6 @@
                     <h:th width="12%">Subtotal</h:th>
                     <h:th width="5%"> </h:th>
                   </h:tr>
-                  <h:tr bgcolor="#FFFFFF" class=" product-detail">
-                    <h:td valign="top"><h:img src="images/image07.jpg" /></h:td>
-                    <h:td valign="top">The Kite Runner by Khalid Hosseini</h:td>
-                    <h:td align="center" valign="top">$295.00</h:td>
-                    <h:td align="center" valign="top"><h:input name="" type="text" value="1" /></h:td>
-                    <h:td align="center" valign="top">$295.00</h:td>
-                    <h:td align="center" valign="top"><h:a href="#"> <h:i class="icon-trash"></h:i></h:a></h:td>
-                  </h:tr>
                  
                 </h:table>
 

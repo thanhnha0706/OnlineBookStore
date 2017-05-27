@@ -22,8 +22,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -32,7 +30,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author quyqu
  */
 @Entity
-@Table(name = "order")
+@Table(name = "customerorder")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "CustomerOrder.findAll", query = "SELECT c FROM CustomerOrder c"),
@@ -48,7 +46,7 @@ public class CustomerOrder implements Serializable {
     @Id
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 30)
+    @Size(min = 1, max = 100)
     @Column(name = "orderId")
     private String orderId;
     @Size(max = 255)
