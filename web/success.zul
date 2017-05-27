@@ -1,0 +1,19 @@
+
+<zk xmlns:h="native">
+    
+        <h:div class="wrapper">
+
+    
+    <include src="/layout/header.zul" />
+    
+        <h:section id="content-holder" class="container-fluid container" style="display: flex;">
+        <h:div class="check-method-right" style="margin: 0 auto;"> 
+        <h:img style="margin-left: 55px;" src="imgs/delivery-truck.png"/>    
+        <h:h3 class="green-t">Your Order Is Completed.</h:h3>
+                    
+                  </h:div>
+    </h:section>    
+    <include src="/layout/footer.zul" />
+   
+        </h:div>
+</zk>
