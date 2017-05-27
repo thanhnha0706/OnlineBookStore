@@ -7,10 +7,10 @@ package controllers;
 
 import dao.CustomerOrderDAO;
 import dao.StaffDAO;
-import entity.Book;
-import entity.Customer;
-import entity.CustomerOrder;
-import entity.Staff;
+import models.Book;
+import models.Customer;
+import models.CustomerOrder;
+import models.Staff;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
