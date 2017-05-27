@@ -6,7 +6,7 @@
 package controllers;
 
 import dao.BookDAO;
-import entity.Book;
+import models.Book;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -60,7 +60,10 @@ public class CartController extends HttpServlet {
                 }
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
-                out.println("ok");
+                
+                // redirect to booklist                
+                response.sendRedirect("booklist.zul");
+                
             } else if (action.equals("get")) {
                 List<Book> cart = (List<Book>) session.getAttribute("cart");
                 response.setContentType("application/json");

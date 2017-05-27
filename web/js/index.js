@@ -1,12 +1,17 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 $(document).ready(function () {
     
-   
+    
+    // check if user is logged in
+   $.get("login", function (data, status) {
+       
+       var customer = data.customer;
+       // if the user is logged in
+      if (!$.isEmptyObject(customer)) {
+          // replace header part
+          $("#welcomeMessage").html('Welcome! <a href="#welcome">' + customer.firstName + " " + customer.lastName + '</a>');
+      }
+   });
     
 });
 

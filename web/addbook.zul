@@ -27,11 +27,11 @@
                         <h:div class="controls">
                           <h:input type="text" id="inputIsbn" name="inputIsbn" placeholder=""/>
                         </h:div>
-                      </h:div>
+                      </h:div>                      
                       <h:div class="control-group">
                         <h:label class="control-label" for="inputPage">Number of Page <h:sup>*</h:sup></h:label>
                         <h:div class="controls">
-                          <h:input type="number" id="inputPage" name="inputPage" placeholder=""/>
+                          <h:input type="number" id="inputPage" name="inputPage" placeholder="" />
                         </h:div>
                       </h:div>
                       <h:div class="control-group">
@@ -64,14 +64,12 @@
                           <h:input type="text" id="inputPrice" name="inputPrice" placeholder=""/>
                         </h:div>
                       </h:div>
-                      <h:p><h:a href="#">Forgot your password?</h:a></h:p>
                       <h:div class="control-group">
                         <h:div class="controls">
-                          <h:button type="submit" class="more-btn">Register</h:button>
+                          <h:button type="submit" class="more-btn">Add Book</h:button>
                         </h:div>
                       </h:div>
                     </h:form>
-                    <h:p>Already registered? Please <h:a href="login.zul">log in</h:a>!</h:p>
                   </h:div>
     </h:section>    
     <include src="/layout/footer.zul" />

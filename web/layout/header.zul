@@ -1,136 +1,179 @@
 <div xmlns:h="native">
     <!--<hbox hflex="1" vflex="1" align="center" xmlns:h="native">-->
-      <!--<h:html>-->  
-<h:head>
-<h:title>Book Store</h:title>
-<!--[if lt IE 9]>
-	<h:script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></h:script>
-<![endif]-->
-<!--[if lt IE 9]>
-	<h:script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></h:script>
-<![endif]-->
-<h:meta http-equiv="cache-control" content="no-cache"/>
-<h:meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-<h:meta charset="UTF-8"/>
-<h:meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
-<h:meta name="viewport" content="width=device-width"/>
-<!-- Css Files Start -->
-<h:link href="css/style.css" rel="stylesheet" type="text/css" /><!-- All css -->
-<h:link href="css/bs.css" rel="stylesheet" type="text/css" /><!-- Bootstrap Css -->
-<h:link rel="stylesheet" type="text/css" href="css/main-slider.css" /><!-- Main Slider Css -->
-<!--[if lte IE 10]><link rel="stylesheet" type="text/css" href="css/customIE.css" /><![endif]-->
-<h:link href="css/font-awesome.css" rel="stylesheet" type="text/css" /><!-- Font Awesome Css -->
-<h:link href="css/font-awesome-ie7.css" rel="stylesheet" type="text/css" /><!-- Font Awesome iE7 Css -->
-<h:noscript>
-<h:link rel="stylesheet" type="text/css" href="css/noJS.css" />
-</h:noscript>
-<!-- Css Files End -->
-</h:head>
-        <!--<h:body>-->
-<!-- Start Main Wrapper -->
-<!--<h:div class="wrapper">-->
+    <!--<h:html>-->  
+    <h:head>
+        <h:title>Book Store</h:title>
+        <!--[if lt IE 9]>
+                <h:script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></h:script>
+        <![endif]-->
+        <!--[if lt IE 9]>
+                <h:script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></h:script>
+        <![endif]-->
+        <h:meta http-equiv="cache-control" content="no-cache"/>
+        <h:meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <h:meta charset="UTF-8"/>
+        <h:meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+        <h:meta name="viewport" content="width=device-width"/>
+        <!-- Css Files Start -->
+        <h:link href="css/style.css" rel="stylesheet" type="text/css" /><!-- All css -->
+        <h:link href="css/bs.css" rel="stylesheet" type="text/css" /><!-- Bootstrap Css -->
+        <h:link rel="stylesheet" type="text/css" href="css/main-slider.css" /><!-- Main Slider Css -->
+        <!--[if lte IE 10]><link rel="stylesheet" type="text/css" href="css/customIE.css" /><![endif]-->
+        <h:link href="css/font-awesome.css" rel="stylesheet" type="text/css" /><!-- Font Awesome Css -->
+        <h:link href="css/font-awesome-ie7.css" rel="stylesheet" type="text/css" /><!-- Font Awesome iE7 Css -->
+        <h:link href="css/custom.css" rel="stylesheet" type="text/css" /><!-- Custom Css -->
+        <h:noscript>
+            <h:link rel="stylesheet" type="text/css" href="css/noJS.css" />
+        </h:noscript>
+        <!-- Css Files End -->
+    </h:head>
+    <!--<h:body>-->
+    <!-- Start Main Wrapper -->
+    <!--<h:div class="wrapper">-->
         
-        <h:section class="top-nav-bar">
-    <h:section class="container-fluid container">
-      <h:section class="row-fluid">
-        <h:section class="span6">
-          <h:ul class="top-nav">
-            <h:li><h:a href="index.html" class="active">Home page</h:a></h:li>
-            <h:li><h:a href="grid-view.html">Online Store</h:a></h:li>
-            <h:li><h:a href="blog.html">Blog</h:a></h:li>
-            <h:li><h:a href="shortcodes.html">Short Codes</h:a></h:li>
-            <h:li><h:a href="blog-detail.html">News</h:a></h:li>
-            <h:li><h:a href="contact.html">Contact Us</h:a></h:li>
-          </h:ul>
+    <h:section class="top-nav-bar">
+        <h:section class="container-fluid container">
+            <h:section class="row-fluid">
+                <h:section class="span6">
+                    <h:ul class="top-nav">
+                        <h:li>
+                            <h:a href="/onlinebookstore" class="active">Home page</h:a>
+                        </h:li>
+                        <h:li>
+                            <h:a href="grid-view.html">Online Store</h:a>
+                        </h:li>
+                        <h:li>
+                            <h:a href="blog.html">Blog</h:a>
+                        </h:li>
+                        <h:li>
+                            <h:a href="blog-detail.html">News</h:a>
+                        </h:li>
+                        <h:li>
+                            <h:a href="contact.html">Contact Us</h:a>
+                        </h:li>
+                    </h:ul>
+                </h:section>
+                <h:section class="span6 e-commerce-list">
+          
+                    <h:ul>
+                        <h:li id="welcomeMessage">Welcome! <h:a href="login.zul">Login</h:a> or <h:a href="register.zul">Create an account</h:a></h:li>
+                        <h:li class="p-category">
+                            <h:a href="#">$</h:a> 
+                            <h:a href="#">£</h:a> 
+                            <h:a href="#">€</h:a>
+                        </h:li>
+                        <h:li class="p-category">
+                            <h:a href="#">eng</h:a> 
+                            <h:a href="#">de</h:a> 
+                            <h:a href="#">fr</h:a>
+                        </h:li>
+                    </h:ul>
+          
+          
+                    <h:div class="c-btn"> 
+                        <h:a href="cart.zul" class="cart-btn">Cart</h:a>
+                        <h:div class="btn-group">
+                            <h:button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">0 item(s) - $0.00<h:span class="caret"></h:span></h:button>
+                            <h:ul class="dropdown-menu">
+                                <h:li>
+                                    <h:a href="cart.zul">View Cart</h:a>
+                                </h:li>
+                                <h:li>
+                                    <h:a href="checkout.zul">Check Out</h:a>
+                                </h:li>
+                            </h:ul>
+                        </h:div>
+                    </h:div>
+          
+          
+                </h:section>
+            </h:section>
         </h:section>
-        <h:section class="span6 e-commerce-list">
-          <h:ul>
-            <h:li>Welcome! <h:a href="login.zul">Login</h:a> or <h:a href="register.zul">Create an account</h:a></h:li>
-            <h:li class="p-category"><h:a href="#">$</h:a> <h:a href="#">£</h:a> <h:a href="#">€</h:a></h:li>
-            <h:li class="p-category"><h:a href="#">eng</h:a> <h:a href="#">de</h:a> <h:a href="#">fr</h:a></h:li>
-          </h:ul>
-          <h:div class="c-btn"> <h:a href="cart.html" class="cart-btn">Cart</h:a>
-            <h:div class="btn-group">
-              <h:button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">0 item(s) - $0.00<h:span class="caret"></h:span></h:button>
-              <h:ul class="dropdown-menu">
-                <h:li><h:a href="#">Action</h:a></h:li>
-                <h:li><h:a href="#">Another action</h:a></h:li>
-                <h:li><h:a href="#">Something else here</h:a></h:li>
-              </h:ul>
-            </h:div>
-          </h:div>
-        </h:section>
-      </h:section>
-    </h:section>
-  </h:section>    
+    </h:section>    
   
-      <h:header id="main-header">
-    <h:section class="container-fluid container">
-      <h:section class="row-fluid">
-        <h:section class="span4">
-          <h:h1 id="logo"> <h:a href="/onlinebookstore"><h:img src="images/logo.png" /></h:a> </h:h1>
+    <h:header id="main-header">
+        <h:section class="container-fluid container">
+            <h:section class="row-fluid">
+                <h:section class="span4">
+                    <h:h1 id="logo"> 
+                        <h:a href="/onlinebookstore">
+                            <h:img src="images/logo.png" />
+                        </h:a> 
+                    </h:h1>
+                </h:section>
+                <h:section class="span8">
+                    <h:ul class="top-nav2">
+                        <h:li>
+                            <h:a href="checkout.html">My Account</h:a>
+                        </h:li>
+                        <h:li>
+                            <h:a href="addBook.zul">Sell Your Book</h:a>
+                        </h:li>
+                        <h:li>
+                            <h:a href="order-recieved.html">Track Your Order</h:a>
+                        </h:li>
+                    </h:ul>
+                    <h:div class="search-bar">
+                        <h:input name="" type="text" value="search entire store here..." />
+                        <h:input name="" type="button" value="Search" />
+                    </h:div>
+                </h:section>
+            </h:section>
         </h:section>
-        <h:section class="span8">
-          <h:ul class="top-nav2">
-            <h:li><h:a href="checkout.html">My Account</h:a></h:li>
-            <h:li><h:a href="cart.zul">My Cart</h:a></h:li>
-            <h:li><h:a href="login.zul">Checkout</h:a></h:li>
-            <h:li><h:a href="order-recieved.html">Track Your Order</h:a></h:li>
-          </h:ul>
-          <h:div class="search-bar">
-            <h:input name="" type="text" value="search entire store here..." />
-            <h:input name="" type="button" value="Search" />
-          </h:div>
-        </h:section>
-      </h:section>
-    </h:section>
-    <!-- Start Main Nav Bar -->
-    <h:nav id="nav">
-      <h:div class="navbar navbar-inverse">
-        <h:div class="navbar-inner">
-          <h:button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <h:span class="icon-bar"></h:span> <h:span class="icon-bar"></h:span> <h:span class="icon-bar"></h:span> </h:button>
-          <h:div class="nav-collapse collapse">
-            <h:ul class="nav">
-              <h:li> <h:a href="grid-view.html">Books</h:a> </h:li>
-              <h:li> <h:a href="grid-view.html">NOOK Books</h:a></h:li>
-              <h:li><h:a href="grid-view.html">Textbooks</h:a></h:li>
-              <h:li><h:a href="grid-view.html">News stand</h:a></h:li>
-              <h:li><h:a href="grid-view.html">Teens</h:a></h:li>
-              <h:li><h:a href="grid-view.html">Toys and Games</h:a></h:li>
-              <h:li class="dropdown"> <h:a class="dropdown-toggle" href="grid-view.html" data-toggle="dropdown"><h:i class="icon-heart"></h:i> Features<h:b class="caret"></h:b> </h:a>
-                <h:ul class="dropdown-menu">
-                    <h:li><h:a href="about-us.html">About Us</h:a></h:li>
-                    <h:li><h:a href="blog.html">Blog</h:a></h:li>
-                    <h:li><h:a href="blog-detail.html">Blog Detail</h:a></h:li>
-                    <h:li><h:a href="grid-view.html">Product Grid View</h:a></h:li>
-                    <h:li><h:a href="list-view.html">Product List View</h:a></h:li>
-                    <h:li><h:a href="grid-view-without-side-bar.html">Product Grid View Without Side Bar</h:a></h:li>
-                    <h:li><h:a href="shortcodes.html">Short Codes</h:a></h:li>
-                    <h:li><h:a href="blog-detail.html">News</h:a></h:li>
-                    <h:li><h:a href="contact.html">Contact Us</h:a></h:li>
-                </h:ul>
-              </h:li>
-              <h:li class="dropdown"> <h:a class="dropdown-toggle" href="grid-view.html" data-toggle="dropdown">Movies and TV <h:b class="caret"></h:b> </h:a>
-                <h:ul class="dropdown-menu">
-                  <h:li><h:a href="#">Submenu Detail Column 1</h:a></h:li>
-                  <h:li><h:a href="#">Submenu Detail Column 2</h:a></h:li>
-                  <h:li><h:a href="#">Submenu Detail Column 3</h:a></h:li>
-                </h:ul>
-              </h:li>
-              <h:li> <h:a href="grid-view.html">Music</h:a></h:li>
-              <h:li> <h:a href="grid-view.html">Gift Cards</h:a> </h:li>
-              <h:li><h:a href="grid-view.html">Deals and Offers</h:a></h:li>
-            </h:ul>
-          </h:div>
-          <!--/.nav-collapse -->
-        </h:div>
-        <!-- /.navbar-inner -->
-      </h:div>
-      <!-- /.navbar -->
-    </h:nav>
-    <!-- End Main Nav Bar -->
-  </h:header>
+        <!-- Start Main Nav Bar -->
+        <h:nav id="nav">
+            <h:div class="navbar navbar-inverse">
+                <h:div class="navbar-inner">
+                    <h:button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+                        <h:span class="icon-bar"></h:span> 
+                        <h:span class="icon-bar"></h:span> 
+                        <h:span class="icon-bar"></h:span> 
+                    </h:button>
+                    <h:div class="nav-collapse collapse">
+                        <h:ul class="nav">
+                            <h:li> 
+                                <h:a href="grid-view.html"><h:i class="icon-heart"></h:i> Features</h:a>
+                            </h:li>
+                            <h:li> 
+                                <h:a href="grid-view.html">NOOK Books</h:a>
+                            </h:li>
+                            <h:li>
+                                <h:a href="grid-view.html">Textbooks</h:a>
+                            </h:li>
+                            <h:li>
+                                <h:a href="grid-view.html">News stand</h:a>
+                            </h:li>
+                            <h:li>
+                                <h:a href="grid-view.html">Teens</h:a>
+                            </h:li>
+                            <h:li>
+                                <h:a href="grid-view.html">Toys and Games</h:a>
+                            </h:li>
+                            <h:li class="dropdown"> 
+                                <h:a class="dropdown-toggle" href="grid-view.html" data-toggle="dropdown">Movies and TV <h:b class="caret"></h:b> </h:a>
+                                <h:ul class="dropdown-menu">
+                                    <h:li>
+                                        <h:a href="#">Submenu Detail Column 1</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="#">Submenu Detail Column 2</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="#">Submenu Detail Column 3</h:a>
+                                    </h:li>
+                                </h:ul>
+                            </h:li>
+                        </h:ul>
+                    </h:div>
+                    <!--/.nav-collapse -->
+                </h:div>
+                <!-- /.navbar-inner -->
+            </h:div>
+            <!-- /.navbar -->
+        </h:nav>
+        <!-- End Main Nav Bar -->
+    </h:header>
               
-<!--</h:div>-->
+    <!--</h:div>-->
     <!--</hbox>-->
 </div>

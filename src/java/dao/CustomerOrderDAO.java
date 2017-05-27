@@ -5,8 +5,8 @@
  */
 package dao;
 
-import entity.Customer;
-import entity.CustomerOrder;
+import models.Customer;
+import models.CustomerOrder;
 import java.util.Hashtable;
 import java.util.List;
 

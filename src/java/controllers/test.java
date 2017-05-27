@@ -5,7 +5,7 @@
  */
 package controllers;
 
-import entity.Customer;
+import models.Customer;
 import dao.CustomerDAO;
 import java.io.IOException;
 import java.io.PrintWriter;

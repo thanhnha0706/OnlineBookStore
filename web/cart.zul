@@ -1,7 +1,7 @@
 
 <zk xmlns:h="native">
     <include src="/layout/header.zul" />
-    <h:script type="text/javascript" src="js/pay.js"></h:script><!-- Pay -->
+    <h:script type="text/javascript" src="js/cart.js"></h:script><!-- Pay -->
     <h:div class="wrapper">
         
         <!-- Start Main Content Holder -->

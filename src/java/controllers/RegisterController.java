@@ -6,7 +6,7 @@
 package controllers;
 
 import dao.CustomerDAO;
-import entity.Customer;
+import models.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;

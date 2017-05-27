@@ -6,7 +6,7 @@
 package dao;
 
 import dao.BaseDAO;
-import entity.Customer;
+import models.Customer;
 import java.util.Hashtable;
 import java.util.List;
 

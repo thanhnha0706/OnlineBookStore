@@ -6,8 +6,8 @@
 package controllers;
 
 import dao.BookDAO;
-import entity.Book;
-import entity.Customer;
+import models.Book;
+import models.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;

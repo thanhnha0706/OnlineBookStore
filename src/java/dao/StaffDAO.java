@@ -5,7 +5,7 @@
  */
 package dao;
 
-import entity.Staff;
+import models.Staff;
 import java.util.List;
 
 /**

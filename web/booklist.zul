@@ -97,7 +97,7 @@
                                 </h:span>
                                 <h:p>${each.shortDescription} </h:p>
                                 <h:div class="cart-price">
-                                    <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a>
+                                    <h:a href="cart?action=add&amp;bookId=${each.bookId}" class="cart-btn2">Add to Cart</h:a>
                                     <h:span class="price">$${each.price}</h:span>
                                 </h:div>
                             </h:div>
