@@ -17,8 +17,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -26,19 +24,16 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "customer")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Customer.findAll", query = "SELECT c FROM Customer c"),
     @NamedQuery(name = "Customer.authenticate", query = "SELECT c FROM Customer c WHERE c.email = :email and c.password = :password"),
+    @NamedQuery(name = "Customer.findAll", query = "SELECT c FROM Customer c"),
     @NamedQuery(name = "Customer.findByCustomerId", query = "SELECT c FROM Customer c WHERE c.customerId = :customerId"),
     @NamedQuery(name = "Customer.findByFirstName", query = "SELECT c FROM Customer c WHERE c.firstName = :firstName"),
     @NamedQuery(name = "Customer.findByLastName", query = "SELECT c FROM Customer c WHERE c.lastName = :lastName"),
     @NamedQuery(name = "Customer.findByAddress", query = "SELECT c FROM Customer c WHERE c.address = :address"),
     @NamedQuery(name = "Customer.findByPhone", query = "SELECT c FROM Customer c WHERE c.phone = :phone"),
-    @NamedQuery(name = "Customer.findByEmail", query = "SELECT c FROM Customer c WHERE c.email = :email")})
+    @NamedQuery(name = "Customer.findByEmail", query = "SELECT c FROM Customer c WHERE c.email = :email"),
+    @NamedQuery(name = "Customer.findByPassword", query = "SELECT c FROM Customer c WHERE c.password = :password")})
 public class Customer implements Serializable {
-
-    @Size(max = 255)
-    @Column(name = "password")
-    private String password;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -64,6 +59,9 @@ public class Customer implements Serializable {
     @Size(max = 30)
     @Column(name = "email")
     private String email;
+    @Size(max = 255)
+    @Column(name = "password")
+    private String password;
     @OneToMany(mappedBy = "customerId")
     private List<CustomerOrder> customerOrderList;
 
@@ -122,6 +120,14 @@ public class Customer implements Serializable {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @XmlTransient
     public List<CustomerOrder> getCustomerOrderList() {
         return customerOrderList;
@@ -154,14 +160,6 @@ public class Customer implements Serializable {
     @Override
     public String toString() {
         return "entity.Customer[ customerId=" + customerId + " ]";
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
     
 }

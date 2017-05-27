@@ -26,20 +26,34 @@ $(document).ready(function () {
         $("#grandtotal").html(grandTotal + " VND");
         $("#payment").attr('href', 'https://www.baokim.vn/payment/product/version11?business=tranquy2512%40gmail.com&id=&order_description=Payment for cart&product_name=Cart number 152&product_price=' + grandTotal + '&product_quantity=1&total_amount=' + grandTotal + '&url_cancel=http://localhost:8080/onlinebookstore/success.zul&url_detail=das&url_success=ed');
     });
-    
-    $(".sent-otp").click(function(event){
+
+    $(".sent-otp").click(function (event) {
         event.preventDefault();
         sentOtp();
     });
 
     function sentOtp() {
         $.get("otp", function (data, status) {
-            alert(data);
+            console.log(data);
         });
     }
 
+    function submitOtp() {
+        $.post("otp", {
+            total: grandTotal,
+            otp: $("#otpCode").val(),
+            inputAddress: $("#inputAddress").val(),
+            inputTelephone: $("#inputTelephone").val()}
+        ).done(function (data) {
+            window.location = data;
+        });
 
+    }
 
+    $("#verify").click(function (event) {
+        event.preventDefault();
+        submitOtp();
+    });
 
 
 
