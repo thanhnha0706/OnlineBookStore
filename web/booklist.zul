@@ -1,0 +1,302 @@
+<zk xmlns:h="xhtml">
+    <!-- Start Main Wrapper -->
+    <h:div class="wrapper">
+   
+        <include src="/layout/header.zul" />
+        
+        
+        <!-- Start Main Content Holder -->
+        <h:section id="content-holder" class="container-fluid container">
+            <h:section class="row-fluid">
+                <h:div class="heading-bar">
+                    <h:h2>Grid View</h:h2>
+                    <h:span class="h-line"></h:span>
+                </h:div>
+                <!-- Start Main Content -->
+                <h:section class="span9 first">
+                    <!-- Start Ad Slider Section -->
+                    <h:div class="blog-sec-slider">
+                        <h:div class="slider5">
+                            <h:div class="slide">
+                                <h:a href="#">
+                                    <h:img src="images/image22.jpg" alt=""/>
+                                </h:a>
+                            </h:div>
+                            <h:div class="slide">
+                                <h:a href="#">
+                                    <h:img src="images/image36.jpg" alt=""/>
+                                </h:a>
+                            </h:div>
+                            <h:div class="slide">
+                                <h:a href="#">
+                                    <h:img src="images/image22.jpg" alt=""/>
+                                </h:a>
+                            </h:div>
+                        </h:div>
+                    </h:div>
+                    <!-- End Ad Slider Section -->
+            
+                    <!-- Start Grid View Section -->
+                    <h:div class="product_sort">
+                        <h:div class="row-1">
+                            <h:div class="left">
+                                <h:span class="s-title">Sort by</h:span>
+                                <h:span class="list-nav">
+                                    <h:select name="">
+                                        <h:option>Position</h:option>
+                                        <h:option>Position 2</h:option>
+                                        <h:option>Position 3</h:option>
+                                        <h:option>Position 4</h:option>
+                                    </h:select>
+                                </h:span>
+                            </h:div>
+                            <h:div class="right">
+                                <h:span>Show</h:span>
+                                <h:span>
+                                    <h:select name="">
+                                        <h:option>1</h:option>
+                                        <h:option>2</h:option>
+                                        <h:option>3</h:option>
+                                        <h:option>4</h:option>
+                                    </h:select>
+                                </h:span>
+                                <h:span>per page</h:span>
+                            </h:div>
+                        </h:div>
+                        <h:div class="row-2">
+                            <h:span class="left">Items 1 to 9 of 15 total</h:span>
+                            <h:ul class="product_view">
+                                <h:li>View as:</h:li>
+                                <h:li>
+                                    <h:a class="grid-view" href="grid-view.html">Grid View</h:a>
+                                </h:li>
+                                <h:li>
+                                    <h:a class="list-view" href="list-view.html">List View</h:a>
+                                </h:li>
+                            </h:ul>
+                        </h:div>
+                    </h:div>
+                    <h:section class="list-holder"
+                               apply="org.zkoss.bind.BindComposer"
+                               viewModel="@id('vm') @init('viewmodels.BookViewModel')">
+                        
+                        <h:article class="item-holder" forEach="${vm.books}">
+                            <h:div class="span2">
+                                <h:a href="book-detail.html">
+                                    <h:img src="images/image09.jpg" alt="Image07" />
+                                </h:a> 
+                            </h:div>
+                            <h:div class="span10">
+                                <h:div class="title-bar">
+                                    <h:a href="book-detail.html">${each.title}</h:a> 
+                                    <h:span>by ${each.author}</h:span>
+                                </h:div>
+                                <h:strong>1 Reviews</h:strong>
+                                <h:span class="rating-bar">
+                                    <h:img alt="Rating Star" src="images/rating-star.png" />
+                                </h:span>
+                                <h:p>${each.shortDescription} </h:p>
+                                <h:div class="cart-price">
+                                    <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a>
+                                    <h:span class="price">$${each.price}</h:span>
+                                </h:div>
+                            </h:div>
+                        </h:article>
+                        
+                    </h:section>
+                    
+                    <h:div class="blog-footer">
+                        <h:div class="pagination">  
+                            <h:ul>  
+                                <h:li>
+                                    <h:a href="#">Prev</h:a>
+                                </h:li>  
+                                <h:li class="active">  
+                                    <h:a href="#">1</h:a>  
+                                </h:li>  
+                                <h:li>
+                                    <h:a href="#">2</h:a>
+                                </h:li>  
+                                <h:li>
+                                    <h:a href="#">3</h:a>
+                                </h:li>  
+                                <h:li>
+                                    <h:a href="#">4</h:a>
+                                </h:li>  
+                                <h:li>
+                                    <h:a href="#">Next</h:a>
+                                </h:li>  
+                            </h:ul>  
+                        </h:div>
+                
+                        <h:ul class="product_view">
+                            <h:li>View as:</h:li>
+                            <h:li>
+                                <h:a class="grid-view" href="grid-view.html">Grid View</h:a>
+                            </h:li>
+                            <h:li>
+                                <h:a class="list-view" href="list-view.html">List View</h:a>
+                            </h:li>
+                        </h:ul>
+                    </h:div>
+                    <!-- End Grid View Section -->
+            
+                </h:section>
+                <!-- End Main Content -->
+        
+                <!-- Start Main Side Bar -->
+                <h:section class="span3">
+                    <h:div class="side-holder">
+                        <h:article class="banner-ad">
+                            <h:img src="images/image20.jpg" alt="Banner Ad" />
+                        </h:article>
+                    </h:div>
+            
+                    <!-- Start Shop by Section -->
+                    <h:div class="side-holder">
+                        <h:article class="shop-by-list">
+                            <h:h2>Shop by</h:h2>
+                            <h:div class="side-inner-holder">
+                                <h:strong class="title">Category</h:strong>
+                                <h:ul class="side-list">
+                                    <h:li>
+                                        <h:a href="grid-view.html">Fiction (15)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="grid-view.html">Healthcare (15)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="grid-view.html">Technology (15)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="grid-view.html">Science(15)</h:a>
+                                    </h:li>
+                                </h:ul>
+                                <h:strong class="title">Price</h:strong>
+                                <h:ul class="side-list">
+                                    <h:li>
+                                        <h:a href="#">$0.00 - $10,00.00 (13)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="#">$10,00.00 - $20,00.00 (2)</h:a>
+                                    </h:li>
+                                </h:ul>
+                                <h:strong class="title">Author</h:strong>
+                                <h:ul class="side-list">
+                                    <h:li>
+                                        <h:a href="book-detail.html">Khalid Hoessini (9)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="book-detail.html">William Blake (2)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="book-detail.html">Anna Kathrinena (1)</h:a>
+                                    </h:li>
+                                    <h:li>
+                                        <h:a href="book-detail.html">Gray Alvin (3)</h:a>
+                                    </h:li>
+                                </h:ul>
+                            </h:div>
+                        </h:article>
+                    </h:div>
+                    <!-- End Shop by Section -->
+            
+                    <!-- Start Latest Reviews Section -->
+                    <h:div class="side-holder">
+                        <h:article class="l-reviews">
+                            <h:h2>Latest Reviews</h:h2>
+                            <h:div class="side-inner-holder">
+                                <h:article class="r-post">
+                                    <h:div class="r-img-title">
+                                        <h:img src="images/image21.jpg" />
+                                        <h:div class="r-det-holder">
+                                            <h:strong class="r-author">
+                                                <h:a href="book-detail.html">The Kite Runner</h:a>
+                                            </h:strong>
+                                            <h:span class="r-by">by Khalid Hoessini</h:span>
+                                            <h:span class="rating-bar">
+                                                <h:img src="images/rating-star.png" alt="Rating Star"/>
+                                            </h:span>
+                                        </h:div>
+                                    </h:div>
+                                    <h:span class="r-type">Vivamus bibendum massa</h:span>
+                                    <h:p>“ Suspendisse tortor lacus, suscipit eget pharetra sed, ornare sed elit. Curabitur mollis, justo sit amet fermentum ” </h:p>
+                                    <h:span class="r-author">Review by BookShoppe’</h:span>
+                                </h:article>
+                                <h:article class="r-post">
+                                    <h:div class="r-img-title">
+                                        <h:img src="images/image21.jpg" />
+                                        <h:div class="r-det-holder">
+                                            <h:strong class="r-author">
+                                                <h:a href="book-detail.html">The Kite Runner</h:a>
+                                            </h:strong>
+                                            <h:span class="r-by">by Khalid Hoessini</h:span>
+                                            <h:span class="rating-bar">
+                                                <h:img src="images/rating-star.png" alt="Rating Star"/>
+                                            </h:span>
+                                        </h:div>
+                                    </h:div>
+                                    <h:span class="r-type">Vivamus bibendum massa</h:span>
+                                    <h:p>“ Suspendisse tortor lacus, suscipit eget pharetra sed, ornare sed elit. Curabitur mollis, justo sit amet fermentum ” </h:p>
+                                    <h:span class="r-author">Review by BookShoppe’</h:span>
+                                </h:article>
+                            </h:div>
+                        </h:article>
+                    </h:div>
+                    <!-- End Latest Reviews Section -->
+            
+                    <!-- Start Price Range Section -->
+                    <h:div class="side-holder">
+                        <h:article class="price-range">
+                            <h:h2>Price Range</h:h2>
+                            <h:div class="side-inner-holder">
+                                <h:p>Select the price range for better search</h:p>                    	
+                                <h:div id="slider-range"></h:div>
+                                <h:p> 
+                                    <h:input type="text" id="amount" class="r-input" /> 
+                                </h:p>
+                            </h:div>
+                        </h:article>
+                    </h:div>
+                    <!-- End Price Range Section -->
+            
+                    <!-- Start Community Poll Section -->
+                    <h:div class="side-holder">
+                        <h:article class="price-range">
+                            <h:h2>Community Poll</h:h2>
+                            <h:div class="side-inner-holder">
+                                <h:p>Who is your favourite American author?</h:p>
+                                <h:label class="radio">
+                                    <h:input type="radio" name="optionsRadios" value="option1" />
+                                    Jane Austin
+                                </h:label>
+                                <h:label class="radio">
+                                    <h:input type="radio" name="optionsRadios" value="option2" />
+                                    William Blake
+                                </h:label>
+                                <h:label class="radio">
+                                    <h:input type="radio" name="optionsRadios" value="option1" />
+                                    Keith Urban
+                                </h:label>
+                                <h:label class="radio">
+                                    <h:input type="radio" name="optionsRadios" value="option2" />
+                                    Anna Smith
+                                </h:label>
+                                <h:a href="#" class="vote-btn">Vote</h:a>
+                            </h:div>
+                        </h:article>
+                    </h:div>
+                    <!-- End Community Poll Section -->
+            
+                </h:section>
+                <!-- End Main Side Bar -->
+            </h:section>
+        </h:section>
+        <!-- End Main Content Holder -->
+        
+    
+        <include src="/layout/footer.zul"/>
+    
+    </h:div>
+    <!-- End Main Wrapper -->
+</zk>

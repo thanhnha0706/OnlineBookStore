@@ -1,4 +1,4 @@
-<zk xmlns:h="xhtml">
+<zk xmlns:h="native">
     <!-- Start Main Wrapper -->
     <h:div class="wrapper">
    
@@ -7,21 +7,6 @@
         <!-- Start Main Content Holder -->
         <div apply="org.zkoss.bind.BindComposer" 
              viewModel="@id('vm') @init('viewmodels.BookViewModel')">
-            
-            <h:ul>
-                <h:li forEach="${vm.books}">
-                        ${each.title}
-                    </h:li>
-            </h:ul>
-            
-        
-<!--            <listbox id="testUl" model="@load(vm.books)" style="border: 1px solid #000">
-                <template name="model">
-                    <h:li label="@load(each.title)">
-                        ${@load(each.title)}
-                    </h:li>
-                </template>										
-            </listbox>-->
                  
             <h:section id="content-holder" class="container-fluid container">
     
