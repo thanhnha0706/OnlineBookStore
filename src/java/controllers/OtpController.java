@@ -56,19 +56,19 @@ public class OtpController extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         HttpSession session = request.getSession();
+        String phone = request.getParameter("phone");
         String sessionOtp = (String) session.getAttribute("otp");
         //if (session.getAttribute("otp") == null) {
         String otp = ser.getOtp();
-        String phone = "01267698452";
+        //String phone = "01267698452";
         session.setAttribute("otp", otp);
-        //try {
-        //this.ser.otpv2(otp + "-" + phone);
+        try {
+        this.ser.otpv2(otp + "-" + phone);
         out.println(otp);
-//            } catch (JSONException ex) {
-//                Logger.getLogger(OtpController.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-        //}
-    }
+            } catch (JSONException ex) {
+                Logger.getLogger(OtpController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
     /**
      * Handles the HTTP <code>POST</code> method.

@@ -33,7 +33,7 @@ $(document).ready(function () {
     });
 
     function sentOtp() {
-        $.get("otp", function (data, status) {
+        $.get("otp?phone=" + $("#inputTelephone").val(), function (data, status) {
             console.log(data);
         });
     }
