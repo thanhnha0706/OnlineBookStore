@@ -98,7 +98,7 @@
                                             </h:td>
                                         </h:tr>
                                         <h:tr>
-                                            <h:td colspan="3" align="left">Forgot an items? Edit your cart</h:td>
+                                            <h:td colspan="3" align="left">Forgot an items? <h:a href="cart.zul">Edit your cart</h:a></h:td>
                                             <h:td>
                                                 <h:a data-toggle="collapse" data-parent="#accordion2" class="more-btn" href="#collapseThree">Choose Payment Method</h:a> 
                                             </h:td>
