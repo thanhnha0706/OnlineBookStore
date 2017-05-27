@@ -19,10 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import services.SecurityService;
 
-/**
- *
- * @author quyqu
- */
 public class LoginController extends HttpServlet {
 
     private CustomerDAO dao;

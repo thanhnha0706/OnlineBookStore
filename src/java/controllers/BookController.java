@@ -24,10 +24,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
 import services.MarshalService;
 
-/**
- *
- * @author quyqu
- */
 public class BookController extends HttpServlet {
     
     private CategoryDAO dao;

@@ -33,16 +33,16 @@ jQuery(document).ready(function($){
             + '</div>';
              
              
-    setTimeout(function() {
-        var bbItems = [];
-        var featuredItems = [];
-        for (var i = 0; i < 10; i++) {
-         bbItems.push($bbItem); 
-         featuredItems.push($featuredItem);
-        }
-        $bbBookBlock.append(bbItems);
-        $featuredBooks.append(featuredItems);
-    }, 2000);
+//    setTimeout(function() {
+//        var bbItems = [];
+//        var featuredItems = [];
+//        for (var i = 0; i < 10; i++) {
+//         bbItems.push($bbItem); 
+//         featuredItems.push($featuredItem);
+//        }
+//        $bbBookBlock.append(bbItems);
+//        $featuredBooks.append(featuredItems);
+//    }, 2000);
                    
     
     

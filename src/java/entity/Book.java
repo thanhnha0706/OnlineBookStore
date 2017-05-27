@@ -27,10 +27,6 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-/**
- *
- * @author quyqu
- */
 @Entity
 @Table(name = "book")
 @XmlRootElement
@@ -45,7 +41,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Book.findByShortDescription", query = "SELECT b FROM Book b WHERE b.shortDescription = :shortDescription"),
     @NamedQuery(name = "Book.findByReleaseDate", query = "SELECT b FROM Book b WHERE b.releaseDate = :releaseDate"),
     @NamedQuery(name = "Book.findByThumbnail", query = "SELECT b FROM Book b WHERE b.thumbnail = :thumbnail")})
-public class Book implements Serializable {
+
+public class Book implements Serializable, Cloneable {
 
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "price")

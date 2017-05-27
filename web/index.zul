@@ -1,241 +1,272 @@
-<!--<?link href="/css/style.css" rel="stylesheet" type="text/css"?> All css 
-<?link href="/css/bs.css" rel="stylesheet" type="text/css" ?> Bootstrap Css 
-<?link rel="stylesheet" type="text/css" href="/css/main-slider.css" ?> Main Slider Css 
-[if lte IE 10]><link rel="stylesheet" type="text/css" href="css/customIE.css" /><![endif]
-<?link href="/css/font-awesome.css" rel="stylesheet" type="text/css" ?> Font Awesome Css 
-<?link href="/css/font-awesome-ie7.css" rel="stylesheet" type="text/css" ?> Font Awesome iE7 Css -->
-<!-- protect page by the authentication init  -->
-<!--<?init class="controllers.AuthenticationInit"?>-->
-<!-- authentication init have to locate before composition -->
-<!--<?init class="org.zkoss.zk.ui.util.Composition" arg0="/layout/template.zul"?>-->
-
-<zk xmlns:h="native">
-  <!-- Start Main Wrapper -->
-  <h:div class="wrapper">
+<zk xmlns:h="xhtml">
+    <!-- Start Main Wrapper -->
+    <h:div class="wrapper">
+   
+        <include src="/layout/header.zul" />
+        
+        <!-- Start Main Content Holder -->
+        <div apply="org.zkoss.bind.BindComposer" 
+             viewModel="@id('vm') @init('viewmodels.BookViewModel')">
+            
+            <h:ul>
+                <h:li forEach="${vm.books}">
+                        ${each.title}
+                    </h:li>
+            </h:ul>
+            
+        
+<!--            <listbox id="testUl" model="@load(vm.books)" style="border: 1px solid #000">
+                <template name="model">
+                    <h:li label="@load(each.title)">
+                        ${@load(each.title)}
+                    </h:li>
+                </template>										
+            </listbox>-->
+                 
+            <h:section id="content-holder" class="container-fluid container">
     
-    
-    <include src="/layout/header.zul" />
-    
-    <!-- Start Main Content Holder -->
-    <div>
-  <h:section id="content-holder" class="container-fluid container">
-    <h:section class="row-fluid">
-      <h:section class="span12 slider">
-        <h:section class="main-slider">
-          <h:div class="bb-custom-wrapper">
-            <h:div id="bb-bookblock" class="bb-bookblock">
+                <h:section class="row-fluid">
+                    <h:section class="span12 slider">
+                        <h:section class="main-slider">
+                            <h:div class="bb-custom-wrapper">
+                                <h:div id="bb-bookblock" class="bb-bookblock">
+                                    
+                                        
+                                        <h:div class="bb-item" forEach="${vm.books}">
+                                            <h:div class="bb-custom-content">
+                                                <h:div class="slide-inner">
+                                                    <h:div class="span4 book-holder"> 
+                                                        <h:a href="book-detail.html">
+                                                            <h:img src="${each.thumbnail}" alt="Book" />
+                                                        </h:a>
+                                                        <h:div class="cart-price"> 
+                                                            <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> 
+                                                            <h:span class="price">$129.90</h:span> 
+                                                        </h:div>
+                                                    </h:div>
+                                                    <h:div class="span8 book-detail">
+                                                        <h:h2>${each.title}</h:h2>
+                                                        <h:strong class="title">${each.author}</h:strong> 
+                                                        <h:span class="rating-bar"> 
+                                                            <h:img src="images/raing-star2.png" alt="Rating Star" /> 
+                                                        </h:span> 
+                                                        <h:a href="book-detail.html" class="shop-btn">SHOP NOW</h:a>
+                                                        <h:div class="cap-holder">
+                                                            <h:p>
+                                                                <h:img src="images/image27.png" alt="Best Choice" align="right"/> Curabitur lreaoreet nisl lorem in pellente e vidicus pannel impirus sadintas velisurabitur lreaoreet nisl lorem in pellente vidicus pannel. </h:p>
+                                                            <h:a href="book-detail.html">Read More</h:a> 
+                                                        </h:div>
+                                                    </h:div>
+                                                </h:div>
+                                            </h:div>
+                                        </h:div>
+                                        
                 
-              <h:div class="bb-item">
-                <h:div class="bb-custom-content">
-                  <h:div class="slide-inner">
-                    <h:div class="span4 book-holder"> <h:a href="book-detail.html"><h:img src="images/image01.jpg" alt="Book" /></h:a>
-                      <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-                    </h:div>
-                    <h:div class="span8 book-detail">
-                      <h:h2>Parenting - For Early Years</h:h2>
-                      <h:strong class="title">by Bonnier</h:strong> <h:span class="rating-bar"> <h:img src="images/raing-star2.png" alt="Rating Star" /> </h:span> <h:a href="book-detail.html" class="shop-btn">SHOP NOW</h:a>
-                      <h:div class="cap-holder">
-                        <h:p><h:img src="images/image27.png" alt="Best Choice" align="right"/> Curabitur lreaoreet nisl lorem in pellente e vidicus pannel impirus sadintas velisurabitur lreaoreet nisl lorem in pellente vidicus pannel. </h:p>
-                        <h:a href="book-detail.html">Read More</h:a> </h:div>
-                    </h:div>
-                  </h:div>
-                </h:div>
-              </h:div>
+                                    
               
              
               
-            </h:div>
-          </h:div>
-          <h:nav class="bb-custom-nav"> <h:a href="#" id="bb-nav-prev" class="left-arrow">Previous</h:a> <h:a href="#" id="bb-nav-next" class="right-arrow">Next</h:a> </h:nav>
-        </h:section>
-        <h:span class="slider-bottom"><h:img src="images/slider-bg.png" alt="Shadow"/></h:span> </h:section>
-      <h:section class="span12 wellcome-msg m-bottom first">
-        <h:h2>WELCOME TO BookShoppe’.</h:h2>
-        <h:p>Offering a wide selection of books on thousands of topics at low prices to satisfy any book-lover!</h:p>
-      </h:section>
-    </h:section>
-    <h:section class="row-fluid ">
-      <h:figure class="span4 s-product">
-        <h:div class="s-product-img"><h:a href="book-detail.html"><h:img src="images/image02.jpg" alt="Image02"/></h:a></h:div>
-        <h:article class="s-product-det">
-          <h:h3><h:a href="book-detail.html">A Walk Across The Sun</h:a></h:h3>
-          <h:p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolore magna aliqua.</h:p>
-          <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span>
-          <h:div class="cart-price"> <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-          <h:span class="sale-icon">Sale</h:span> </h:article>
-      </h:figure>
-      <h:figure class="span4 s-product">
-        <h:div class="s-product-img"><h:a href="book-detail.html"><h:img src="images/image02.jpg" alt="Image02"/></h:a></h:div>
-        <h:article class="s-product-det">
-          <h:h3><h:a href="book-detail.html">A Walk Across The Sun</h:a></h:h3>
-          <h:p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolore magna aliqua.</h:p>
-          <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span>
-          <h:div class="cart-price"> <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-          <h:span class="sale-icon">Sale</h:span> </h:article>
-      </h:figure>
-      <h:figure class="span4 s-product">
-        <h:div class="s-product-img"><h:a href="book-detail.html"><h:img src="images/image02.jpg" alt="Image02"/></h:a></h:div>
-        <h:article class="s-product-det">
-          <h:h3><h:a href="book-detail.html">A Walk Across The Sun</h:a></h:h3>
-          <h:p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolore magna aliqua.</h:p>
-          <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span>
-          <h:div class="cart-price"> <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-          <h:span class="sale-icon">Sale</h:span> </h:article>
-      </h:figure>
-    </h:section>
-    <!-- Start BX Slider holder -->
-    <h:section class="row-fluid m-bottom">
-      <h:section class="span12 features-books">
-        <h:div class="heading-bar">
-          <h:h2>Featured Books</h:h2>
-          <h:span class="h-line"></h:span> 
-        </h:div>
-        <h:div class="slider1">
-          
-            <h:div class="slide"> 
-                <h:a href="book-detail.html">
-                    <h:img src="images/image05.jpg" alt="" class="pro-img"/>
-                </h:a> 
-                <h:span class="title">
-                    <h:a href="book-detail.html">A Walk Across The Sun</h:a>
-                </h:span> 
-                <h:span class="rating-bar">
-                    <h:img src="images/rating-star.png" alt="Rating Star"/>
-                </h:span>
-                <h:div class="cart-price"> <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-            </h:div>
-          
-        </h:div>
-      </h:section>
-    </h:section>
-    <!-- End BX Slider holder -->
-    <!-- Start Featured Author -->
-    <h:section class="row-fluid m-bottom">
-      <h:section class="span9">
-        <h:div class="featured-author">
-          <h:div class="left"> <h:span class="author-img-holder"><h:a href="about-us.html"><h:img src="images/image16.jpg" alt=""/></h:a></h:span>
-            <h:div class="author-det-box">
-              <h:div class="ico-holder">
-                <h:div id="socialicons" class="hidden-phone"> <h:a id="social_linkedin" class="social_active" href="#" title="Visit Google Plus page"><h:span></h:span></h:a> <h:a id="social_facebook" class="social_active" href="#" title="Visit Facebook page"><h:span></h:span></h:a> <h:a id="social_twitter" class="social_active" href="#" title="Visit Twitter page"><h:span></h:span></h:a> </h:div>
-              </h:div>
-              <h:div class="author-det"> <h:span class="title">Featured Author</h:span> <h:span class="title2">Mr. Khalid Hosseini</h:span>
-                <h:ul class="books-list">
-                  <h:li><h:a href="book-detail.html"><h:img src="images/image11.jpg" alt=""/></h:a></h:li>
-                  <h:li><h:a href="book-detail.html"><h:img src="images/image12.jpg" alt=""/></h:a></h:li>
-                  <h:li><h:a href="book-detail.html"><h:img src="images/image13.jpg" alt=""/></h:a></h:li>
-                  <h:li><h:a href="book-detail.html"><h:img src="images/image14.jpg" alt=""/></h:a></h:li>
-                </h:ul>
-              </h:div>
-            </h:div>
-          </h:div>
-          <h:div class="right">
-            <h:div class="current-book"> <h:strong class="title"><h:a href="book-detail.html">The Kite Runner</h:a></h:strong>
-              <h:p>Lorem ipsum dolor slo nsec  tueraliquet rbi nec In nisl lorem in ...</h:p>
-              <h:div class="cart-price"> <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
-            </h:div>
-            <h:div class="c-b-img"> <h:a href="book-detail.html"><h:img src="images/image17.jpg" alt="" /></h:a> </h:div>
-          </h:div>
-        </h:div>
-      </h:section>
-      <h:section class="span3 best-sellers">
-        <h:div class="heading-bar">
-          <h:h2>Best Sellers</h:h2>
-          <h:span class="h-line"></h:span> </h:div>
-        <h:div class="slider2">
-          <h:div class="slide"><h:a href="book-detail.html"><h:img src="images/image15.jpg" alt=""/></h:a>
-            <h:div class="slide2-caption">
-              <h:div class="left"> <h:span class="title"><h:a href="book-detail.html">Thousand Splendid Miles</h:a></h:span> <h:span class="author-name">by Khalid Housseini</h:span> </h:div>
-              <h:div class="right"> <h:span class="price">$139.50</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
-            </h:div>
-          </h:div>
-          <h:div class="slide"><h:a href="book-detail.html"><h:img src="images/image15.jpg" alt=""/></h:a>
-            <h:div class="slide2-caption">
-              <h:div class="left"> <h:span class="title"><h:a href="book-detail.html">Thousand Splendid Miles</h:a></h:span> <h:span class="author-name">by Khalid Housseini</h:span> </h:div>
-              <h:div class="right"> <h:span class="price">$139.50</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
-            </h:div>
-          </h:div>
-          <h:div class="slide"><h:a href="book-detail.html"><h:img src="images/image15.jpg" alt=""/></h:a>
-            <h:div class="slide2-caption">
-              <h:div class="left"> <h:span class="title"><h:a href="book-detail.html">Thousand Splendid Miles</h:a></h:span> <h:span class="author-name">by Khalid Housseini</h:span> </h:div>
-              <h:div class="right"> <h:span class="price">$139.50</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
-            </h:div>
-          </h:div>
-        </h:div>
-      </h:section>
-    </h:section>
-    <!-- End Featured Author -->
-    <h:section class="row-fluid m-bottom">
-      <!-- Start Blog Section -->
-      <h:section class="span9 blog-section">
-        <h:div class="heading-bar">
-          <h:h2>Latest from the ${info}</h:h2>
-          <h:span class="h-line"></h:span> 
-        </h:div>
-        <h:div class="slider3">
-          <h:div class="slide">
-            <h:div class="post-img"><h:a href="blog-detail.html"><h:img src="images/image18.jpg" alt=""/></h:a> <h:span class="post-date"><h:span>02</h:span> May</h:span> </h:div>
-            <h:div class="post-det">
-              <h:h3><h:a href="blog-detail.html">Our latest arrival is the Spring Summer 2013 Book Fair</h:a></h:h3>
-              <h:span class="comments-num">6 comments</h:span>
-              <h:p>Gluten-free quinoa selfies carles, kogi gentrify retro marfa viral. Aesthetic before they sold out put a bird on it sriracha typewriter. Skateboard viral irony tonx ... </h:p>
-            </h:div>
-          </h:div>
-          <h:div class="slide">
-            <h:div class="post-img"><h:a href="blog-detail.html"><h:img src="images/image18.jpg" alt=""/></h:a> <h:span class="post-date"><h:span>02</h:span> May</h:span> </h:div>
-            <h:div class="post-det">
-              <h:h3><h:a href="blog-detail.html">Our latest arrival is the Spring Summer 2013 Book Fair</h:a></h:h3>
-              <h:span class="comments-num">6 comments</h:span>
-              <h:p>Gluten-free quinoa selfies carles, kogi gentrify retro marfa viral. Aesthetic before they sold out put a bird on it sriracha typewriter. Skateboard viral irony tonx ... </h:p>
-            </h:div>
-          </h:div>
-          <h:div class="slide">
-            <h:div class="post-img"><h:a href="blog-detail.html"><h:img src="images/image18.jpg" alt=""/></h:a> <h:span class="post-date"><h:span>02</h:span> May</h:span> </h:div>
-            <h:div class="post-det">
-              <h:h3><h:a href="blog-detail.html">Our latest arrival is the Spring Summer 2013 Book Fair</h:a></h:h3>
-              <h:span class="comments-num">6 comments</h:span>
-              <h:p>Gluten-free quinoa selfies carles, kogi gentrify retro marfa viral. Aesthetic before they sold out put a bird on it sriracha typewriter. Skateboard viral irony tonx ... </h:p>
-            </h:div>
-          </h:div>
-        </h:div>
-      </h:section>
-      <!-- End Blog Section -->
-      <!-- Start Testimonials Section -->
-      <h:section class="span3 testimonials">
-        <h:div class="heading-bar">
-          <h:h2>Testimonials</h:h2>
-          <h:span class="h-line"></h:span> 
-        </h:div>
-        <h:div class="slider4">
-          <h:div class="slide">
-            <h:div class="author-name-holder"> <h:img src="images/image19.png" /> </h:div>
-            <h:strong class="title">Robert Smith <h:span>Manager</h:span></h:strong>
-            <h:div class="slide">
-              <h:p>Lorem ipsum dolor slo onsec nelioro tueraliquet Morbi nec In Curabitur lorem in design Morbi nec In Curabituritus gojus, </h:p>
-            </h:div>
-          </h:div>
-          <h:div class="slide">
-            <h:div class="author-name-holder"> <h:img src="images/image19.png" /> </h:div>
-            <h:strong class="title">Robert Smith <h:span>Manager</h:span></h:strong>
-            <h:div class="slide">
-              <h:p>Lorem ipsum dolor slo onsec nelioro tueraliquet Morbi nec In Curabitur lorem in design Morbi nec In Curabituritus gojus, </h:p>
-            </h:div>
-          </h:div>
-          <h:div class="slide">
-            <h:div class="author-name-holder"> <h:img src="images/image19.png" /> </h:div>
-            <h:strong class="title">Robert Smith <h:span>Manager</h:span></h:strong>
-            <h:div class="slide">
-              <h:p>Lorem ipsum dolor slo onsec nelioro tueraliquet Morbi nec In Curabitur lorem in design Morbi nec In Curabituritus gojus, </h:p>
-            </h:div>
-          </h:div>
-        </h:div>
-      </h:section>
-      <!-- End Testimonials Section -->
-    </h:section>
-  </h:section>
-    </div>
-    <!-- End Main Content Holder -->
+                                </h:div>
+                            </h:div>
+                            <h:nav class="bb-custom-nav"> 
+                                <h:a href="#" id="bb-nav-prev" class="left-arrow">Previous</h:a> 
+                                <h:a href="#" id="bb-nav-next" class="right-arrow">Next</h:a> 
+                            </h:nav>
+                        </h:section>
+                        <h:span class="slider-bottom">
+                            <h:img src="images/slider-bg.png" alt="Shadow"/>
+                        </h:span> 
+                    </h:section>
+                    <h:section class="span12 wellcome-msg m-bottom first">
+                        <h:h2>WELCOME TO BookShoppe’.</h:h2>
+                        <h:p>Offering a wide selection of books on thousands of topics at low prices to satisfy any book-lover!</h:p>
+                    </h:section>
+                </h:section>
     
-    <include src="/layout/footer.zul"/>
+    
+                <h:section class="row-fluid ">
+                    <h:figure class="span4 s-product" forEach="${vm.books}">
+                        <h:div class="s-product-img">
+                            <h:a href="book-detail.html">
+                                <h:img src="${each.thumbnail}" alt="Image02"/>
+                            </h:a>
+                        </h:div>
+                        <h:article class="s-product-det">
+                            <h:h3>
+                                <h:a href="book-detail.html">${each.title}</h:a>
+                            </h:h3>
+                            <h:p>${each.shortDescription}</h:p>
+                            <h:span class="rating-bar">
+                                <h:img src="images/rating-star.png" alt="Rating Star"/>
+                            </h:span>
+                            <h:div class="cart-price"> 
+                                <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> 
+                                <h:span class="price">${each.price}</h:span> 
+                            </h:div>
+                            <h:span class="sale-icon">Sale</h:span> 
+                        </h:article>
+                    </h:figure>
+                </h:section>
+    
+    
+                <!-- Start BX Slider holder -->
+                <h:section class="row-fluid m-bottom">
+                    <h:section class="span12 features-books">
+                        <h:div class="heading-bar">
+                            <h:h2>Featured Books</h:h2>
+                            <h:span class="h-line"></h:span> 
+                        </h:div>
+                        <h:div class="slider1">
+          
+                            <h:div class="slide" forEach="${vm.books}"> 
+                                <h:a href="book-detail.html">
+                                    <h:img src="${each.thumbnail}" alt="" class="pro-img"/>
+                                </h:a> 
+                                <h:span class="title">
+                                    <h:a href="book-detail.html">${each.title}</h:a>
+                                </h:span> 
+                                <h:span class="rating-bar">
+                                    <h:img src="images/rating-star.png" alt="Rating Star"/>
+                                </h:span>
+                                <h:div class="cart-price"> 
+                                    <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> 
+                                    <h:span class="price">${each.price}</h:span> 
+                                </h:div>
+                            </h:div>
+          
+                        </h:div>
+                    </h:section>
+                </h:section>
+    
+                <!-- End BX Slider holder -->
+                <!-- Start Featured Author -->
+                <!--    <h:section class="row-fluid m-bottom">
+                  <h:section class="span9">
+                    <h:div class="featured-author">
+                      <h:div class="left"> <h:span class="author-img-holder"><h:a href="about-us.html"><h:img src="images/image16.jpg" alt=""/></h:a></h:span>
+                        <h:div class="author-det-box">
+                          <h:div class="ico-holder">
+                            <h:div id="socialicons" class="hidden-phone"> <h:a id="social_linkedin" class="social_active" href="#" title="Visit Google Plus page"><h:span></h:span></h:a> <h:a id="social_facebook" class="social_active" href="#" title="Visit Facebook page"><h:span></h:span></h:a> <h:a id="social_twitter" class="social_active" href="#" title="Visit Twitter page"><h:span></h:span></h:a> </h:div>
+                          </h:div>
+                          <h:div class="author-det"> <h:span class="title">Featured Author</h:span> <h:span class="title2">Mr. Khalid Hosseini</h:span>
+                            <h:ul class="books-list">
+                              <h:li><h:a href="book-detail.html"><h:img src="images/image11.jpg" alt=""/></h:a></h:li>
+                              <h:li><h:a href="book-detail.html"><h:img src="images/image12.jpg" alt=""/></h:a></h:li>
+                              <h:li><h:a href="book-detail.html"><h:img src="images/image13.jpg" alt=""/></h:a></h:li>
+                              <h:li><h:a href="book-detail.html"><h:img src="images/image14.jpg" alt=""/></h:a></h:li>
+                            </h:ul>
+                          </h:div>
+                        </h:div>
+                      </h:div>
+                      <h:div class="right">
+                        <h:div class="current-book"> <h:strong class="title"><h:a href="book-detail.html">The Kite Runner</h:a></h:strong>
+                          <h:p>Lorem ipsum dolor slo nsec  tueraliquet rbi nec In nisl lorem in ...</h:p>
+                          <h:div class="cart-price"> <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> <h:span class="price">$129.90</h:span> </h:div>
+                        </h:div>
+                        <h:div class="c-b-img"> <h:a href="book-detail.html"><h:img src="images/image17.jpg" alt="" /></h:a> </h:div>
+                      </h:div>
+                    </h:div>
+                  </h:section>
+                  <h:section class="span3 best-sellers">
+                    <h:div class="heading-bar">
+                      <h:h2>Best Sellers</h:h2>
+                      <h:span class="h-line"></h:span> </h:div>
+                    <h:div class="slider2">
+                      <h:div class="slide"><h:a href="book-detail.html"><h:img src="images/image15.jpg" alt=""/></h:a>
+                        <h:div class="slide2-caption">
+                          <h:div class="left"> <h:span class="title"><h:a href="book-detail.html">Thousand Splendid Miles</h:a></h:span> <h:span class="author-name">by Khalid Housseini</h:span> </h:div>
+                          <h:div class="right"> <h:span class="price">$139.50</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
+                        </h:div>
+                      </h:div>
+                      <h:div class="slide"><h:a href="book-detail.html"><h:img src="images/image15.jpg" alt=""/></h:a>
+                        <h:div class="slide2-caption">
+                          <h:div class="left"> <h:span class="title"><h:a href="book-detail.html">Thousand Splendid Miles</h:a></h:span> <h:span class="author-name">by Khalid Housseini</h:span> </h:div>
+                          <h:div class="right"> <h:span class="price">$139.50</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
+                        </h:div>
+                      </h:div>
+                      <h:div class="slide"><h:a href="book-detail.html"><h:img src="images/image15.jpg" alt=""/></h:a>
+                        <h:div class="slide2-caption">
+                          <h:div class="left"> <h:span class="title"><h:a href="book-detail.html">Thousand Splendid Miles</h:a></h:span> <h:span class="author-name">by Khalid Housseini</h:span> </h:div>
+                          <h:div class="right"> <h:span class="price">$139.50</h:span> <h:span class="rating-bar"><h:img src="images/rating-star.png" alt="Rating Star"/></h:span> </h:div>
+                        </h:div>
+                      </h:div>
+                    </h:div>
+                  </h:section>
+                </h:section>-->
+                <!-- End Featured Author -->
+                <!--    <h:section class="row-fluid m-bottom">
+                   Start Blog Section 
+                  <h:section class="span9 blog-section">
+                    <h:div class="heading-bar">
+                      <h:h2>Latest from the ${info}</h:h2>
+                      <h:span class="h-line"></h:span> 
+                    </h:div>
+                    <h:div class="slider3">
+                      <h:div class="slide">
+                        <h:div class="post-img"><h:a href="blog-detail.html"><h:img src="images/image18.jpg" alt=""/></h:a> <h:span class="post-date"><h:span>02</h:span> May</h:span> </h:div>
+                        <h:div class="post-det">
+                          <h:h3><h:a href="blog-detail.html">Our latest arrival is the Spring Summer 2013 Book Fair</h:a></h:h3>
+                          <h:span class="comments-num">6 comments</h:span>
+                          <h:p>Gluten-free quinoa selfies carles, kogi gentrify retro marfa viral. Aesthetic before they sold out put a bird on it sriracha typewriter. Skateboard viral irony tonx ... </h:p>
+                        </h:div>
+                      </h:div>
+                      <h:div class="slide">
+                        <h:div class="post-img"><h:a href="blog-detail.html"><h:img src="images/image18.jpg" alt=""/></h:a> <h:span class="post-date"><h:span>02</h:span> May</h:span> </h:div>
+                        <h:div class="post-det">
+                          <h:h3><h:a href="blog-detail.html">Our latest arrival is the Spring Summer 2013 Book Fair</h:a></h:h3>
+                          <h:span class="comments-num">6 comments</h:span>
+                          <h:p>Gluten-free quinoa selfies carles, kogi gentrify retro marfa viral. Aesthetic before they sold out put a bird on it sriracha typewriter. Skateboard viral irony tonx ... </h:p>
+                        </h:div>
+                      </h:div>
+                      <h:div class="slide">
+                        <h:div class="post-img"><h:a href="blog-detail.html"><h:img src="images/image18.jpg" alt=""/></h:a> <h:span class="post-date"><h:span>02</h:span> May</h:span> </h:div>
+                        <h:div class="post-det">
+                          <h:h3><h:a href="blog-detail.html">Our latest arrival is the Spring Summer 2013 Book Fair</h:a></h:h3>
+                          <h:span class="comments-num">6 comments</h:span>
+                          <h:p>Gluten-free quinoa selfies carles, kogi gentrify retro marfa viral. Aesthetic before they sold out put a bird on it sriracha typewriter. Skateboard viral irony tonx ... </h:p>
+                        </h:div>
+                      </h:div>
+                    </h:div>
+                  </h:section>
+                   End Blog Section 
+                   Start Testimonials Section 
+                  <h:section class="span3 testimonials">
+                    <h:div class="heading-bar">
+                      <h:h2>Testimonials</h:h2>
+                      <h:span class="h-line"></h:span> 
+                    </h:div>
+                    <h:div class="slider4">
+                      <h:div class="slide">
+                        <h:div class="author-name-holder"> <h:img src="images/image19.png" /> </h:div>
+                        <h:strong class="title">Robert Smith <h:span>Manager</h:span></h:strong>
+                        <h:div class="slide">
+                          <h:p>Lorem ipsum dolor slo onsec nelioro tueraliquet Morbi nec In Curabitur lorem in design Morbi nec In Curabituritus gojus, </h:p>
+                        </h:div>
+                      </h:div>
+                      <h:div class="slide">
+                        <h:div class="author-name-holder"> <h:img src="images/image19.png" /> </h:div>
+                        <h:strong class="title">Robert Smith <h:span>Manager</h:span></h:strong>
+                        <h:div class="slide">
+                          <h:p>Lorem ipsum dolor slo onsec nelioro tueraliquet Morbi nec In Curabitur lorem in design Morbi nec In Curabituritus gojus, </h:p>
+                        </h:div>
+                      </h:div>
+                      <h:div class="slide">
+                        <h:div class="author-name-holder"> <h:img src="images/image19.png" /> </h:div>
+                        <h:strong class="title">Robert Smith <h:span>Manager</h:span></h:strong>
+                        <h:div class="slide">
+                          <h:p>Lorem ipsum dolor slo onsec nelioro tueraliquet Morbi nec In Curabitur lorem in design Morbi nec In Curabituritus gojus, </h:p>
+                        </h:div>
+                      </h:div>
+                    </h:div>
+                  </h:section>
+                   End Testimonials Section 
+                </h:section>-->
+       
+            </h:section>
+        </div>
+        <!-- End Main Content Holder -->
+    
+        <include src="/layout/footer.zul"/>
     
     </h:div>
     <!-- End Main Wrapper -->

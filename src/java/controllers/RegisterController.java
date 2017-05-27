@@ -18,10 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import services.SecurityService;
 
-/**
- *
- * @author quyqu
- */
 public class RegisterController extends HttpServlet {
 
     private CustomerDAO dao;
