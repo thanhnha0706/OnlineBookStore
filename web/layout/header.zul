@@ -109,8 +109,8 @@
                         </h:li>
                     </h:ul>
                     <h:div class="search-bar">
-                        <h:input id="searchText" name="" type="text" placeholder="search entire store here..." />
-                        <h:input id="searchButton" name="" type="button" value="Search" />
+                        <h:input class="searchText" name="" type="text" placeholder="search entire store here..." />
+                        <h:input class="searchButton" name="" type="button" value="Search" />
                     </h:div>
                 </h:section>
             </h:section>

@@ -97,13 +97,16 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
         <servlet-class>controllers.CustomerController</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
         <servlet-name>SearchController</servlet-name>
         <servlet-class>controllers.SearchController</servlet-class>
-=======
+    </servlet>
+    <servlet>
         <servlet-name>LogoutController</servlet-name>
         <servlet-class>controllers.LogoutController</servlet-class>
->>>>>>> 00fca70354c0f930bd6131d02cd8bd0537e7ea40
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryController</servlet-name>
+        <servlet-class>controllers.CategoryController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>zkLoader</servlet-name>
@@ -233,6 +236,10 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
     <servlet-mapping>
         <servlet-name>LogoutController</servlet-name>
         <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryController</servlet-name>
+        <url-pattern>/category</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>60</session-timeout>

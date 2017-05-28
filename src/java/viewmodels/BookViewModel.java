@@ -23,7 +23,7 @@ public class BookViewModel implements Serializable {
     public List<Book> getBooks() {        
         return books;
     }
-        
+            
     @Init
     public void init() {
         

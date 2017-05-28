@@ -21,6 +21,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.bind.JAXBException;
 import models.Customer;
 import services.MarshalService;
@@ -72,36 +73,45 @@ public class BookController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String inputTitle = request.getParameter("inputTitle");
-        String inputAuthor = request.getParameter("inputAuthor");
-        String inputIsbn = request.getParameter("inputIsbn");
-        int inputPage = Integer.parseInt(request.getParameter("inputPage"));
-        String inputKeyword = request.getParameter("inputKeyword");
-        String inputDescription = request.getParameter("inputDescription");
-        //String inputReleaseDate = request.getParameter("inputReleaseDate");
-        String inputThumbnail = request.getParameter("inputThumbnail");
-        String inputPrice = request.getParameter("inputPrice");
-        String categoryId = "1";
         
-        Book newBook = new Book();
-        newBook.setTitle(inputTitle);
-        newBook.setAuthor(inputAuthor);
-        newBook.setIsbn(inputIsbn);
-        newBook.setNumberOfPage(inputPage);
-        newBook.setKeyword(inputKeyword);
-        newBook.setShortDescription(inputDescription);
-        newBook.setReleaseDate(new Date());
-        newBook.setThumbnail(inputThumbnail);
-        newBook.setPrice(new BigDecimal(inputPrice));
-        newBook.setCategoryId(dao.findById(categoryId));
-        newBook.setBookId(java.util.UUID.randomUUID().toString());
+        HttpSession session = request.getSession();
+        Customer customer = (Customer) session.getAttribute("customer");
         
-        Customer customer = (Customer)request.getSession().getAttribute("customer");
-        newBook.setCustomerId(customer);
-        bDao.insert(newBook);
-        
-        response.sendRedirect("addbook.zul");
-        
+        // if the user is logged in
+        if (customer != null) {
+            
+            String inputTitle = request.getParameter("inputTitle");
+            String inputAuthor = request.getParameter("inputAuthor");
+            String inputIsbn = request.getParameter("inputIsbn");
+            int inputPage = Integer.parseInt(request.getParameter("inputPage"));
+            String inputKeyword = request.getParameter("inputKeyword");
+            String inputDescription = request.getParameter("inputDescription");
+            //String inputReleaseDate = request.getParameter("inputReleaseDate");
+            String inputThumbnail = request.getParameter("inputThumbnail");
+            String inputPrice = request.getParameter("inputPrice");
+            String categoryId = request.getParameter("inputCategory");
+
+            Book newBook = new Book();
+            newBook.setTitle(inputTitle);
+            newBook.setAuthor(inputAuthor);
+            newBook.setIsbn(inputIsbn);
+            newBook.setNumberOfPage(inputPage);
+            newBook.setKeyword(inputKeyword);
+            newBook.setShortDescription(inputDescription);
+            newBook.setReleaseDate(new Date());
+            newBook.setThumbnail(inputThumbnail);
+            newBook.setPrice(new BigDecimal(inputPrice));
+            newBook.setCategoryId(dao.findById(categoryId));
+            newBook.setBookId(java.util.UUID.randomUUID().toString());
+            newBook.setCustomerId(customer);
+            bDao.insert(newBook);
+
+            response.sendRedirect("/onlinebookstore");
+        }
+        // otherwise
+        else {
+            response.sendRedirect("login.zul");
+        }        
     }
 
     /**

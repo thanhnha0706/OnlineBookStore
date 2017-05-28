@@ -18,15 +18,25 @@
                     <h:div class="product_sort">
                         <h:div class="row-1">
                             <h:div class="left">
-                                <h:span class="s-title">Sort by</h:span>
-                                <h:span class="list-nav">
-                                    <h:select name="">
-                                        <h:option>Position</h:option>
-                                        <h:option>Position 2</h:option>
-                                        <h:option>Position 3</h:option>
-                                        <h:option>Position 4</h:option>
-                                    </h:select>
-                                </h:span>
+                                <h:div>
+                                    
+                                    <h:input class="searchText" name="" type="text" placeholder="search entire store here..." style="float: left" />
+                                    <h:input class="searchButton more-btn" name="" type="button" value="Search" style="float: left" />
+<!--                                    <h:div class="btn-group">
+                                        <h:button data-toggle="dropdown" class="btn dropdown-toggle">Action <h:span class="caret"></h:span></h:button>
+                                        <h:ul class="dropdown-menu">
+                                            <h:li>
+                                                <h:a href="#">Action</h:a>
+                                            </h:li>
+                                            
+                                            <h:li class="divider"></h:li>
+                                            <h:li>
+                                                <h:a href="#">Separated link</h:a>
+                                            </h:li>
+                                        </h:ul>
+                                    </h:div>-->
+              
+                                </h:div>
                             </h:div>
                             <h:div class="right">
                                 <h:span>Show</h:span>
@@ -54,8 +64,9 @@
                             </h:ul>
                         </h:div>
                     </h:div>
+                    
                     <h:section class="list-holder" id="searchResults">
-                                                
+                                            
                     </h:section>
                     
                     <h:div class="blog-footer">
@@ -247,7 +258,6 @@
         </h:section>
         <!-- End Main Content Holder -->
         
-    
         <include src="/layout/footer.zul"/>
     
     </h:div>

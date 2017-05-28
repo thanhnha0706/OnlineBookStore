@@ -43,6 +43,6 @@ public class CustomerDAO extends BaseDAO{
         params.put("password", password);
         
         Customer customer = (Customer) super.executeNamedQuery("Customer.authenticate", params);
-        return customer;
+        return customer;    
     }
 }

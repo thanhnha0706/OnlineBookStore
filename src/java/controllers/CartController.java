@@ -60,7 +60,10 @@ public class CartController extends HttpServlet {
                 if (book != null) {
                     cart.add(book);
                 }
-                response.sendRedirect("booklist.zul");
+                
+                // redirect to current viewing page                
+                response.sendRedirect(request.getHeader("referer"));
+                
             } else if (action.equals("get")) {              
                 List<Book> cart = (List<Book>) session.getAttribute("cart");
                 response.setContentType("application/json");

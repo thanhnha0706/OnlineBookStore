@@ -65,13 +65,24 @@
                         </h:div>
                       </h:div>
                       <h:div class="control-group">
+                        <h:label class="control-label" for="inputCategory">Category <h:sup>*</h:sup>
+                        </h:label>
+                        <h:div class="controls">
+                            <h:select id="inputCategory" name="inputCategory" class="form-control">
+                            </h:select>
+                        </h:div>
+                      </h:div>
+                      <h:div class="control-group">
                         <h:div class="controls">
                           <h:button type="submit" class="more-btn">Add Book</h:button>
                         </h:div>
                       </h:div>
                     </h:form>
                   </h:div>
-    </h:section>    
+    </h:section> 
+    
+    <h:script type="text/javascript" src="js/addbook.js"></h:script>
+          
     <include src="/layout/footer.zul" />
    
         </h:div>

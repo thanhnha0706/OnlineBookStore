@@ -24,8 +24,8 @@
                                                             <h:img src="${each.thumbnail}" alt="Book" />
                                                         </h:a>
                                                         <h:div class="cart-price"> 
-                                                            <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> 
-                                                            <h:span class="price">$129.90</h:span> 
+                                                            <h:a class="cart-btn2" href="cart?action=add&amp;bookId=${each.bookId}">Add to Cart</h:a> 
+                                                            <h:span class="price">${each.price}₫</h:span> 
                                                         </h:div>
                                                     </h:div>
                                                     <h:div class="span8 book-detail">
@@ -63,7 +63,7 @@
                 </h:section>
     
     
-                <h:section class="row-fluid" id="salePanel">
+<!--                <h:section class="row-fluid" id="salePanel">
                     <h:figure class="span4 s-product" forEach="${vm.books}">
                         <h:div class="s-product-img">
                             <h:a href="book-detail.html">
@@ -79,13 +79,13 @@
                                 <h:img src="images/rating-star.png" alt="Rating Star"/>
                             </h:span>
                             <h:div class="cart-price"> 
-                                <h:a href="cart.html" class="cart-btn2">Add to Cart</h:a> 
-                                <h:span class="price">${each.price}</h:span> 
+                                <h:a href="cart?action=add&amp;bookId=${each.bookId}" class="cart-btn2">Add to Cart</h:a> 
+                                <h:span class="price">${each.price}₫</h:span> 
                             </h:div>
                             <h:span class="sale-icon">Sale</h:span> 
                         </h:article>
                     </h:figure>
-                </h:section>
+                </h:section>-->
     
     
                 <!-- Start BX Slider holder -->
@@ -108,8 +108,8 @@
                                     <h:img src="images/rating-star.png" alt="Rating Star"/>
                                 </h:span>
                                 <h:div class="cart-price"> 
-                                    <h:a class="cart-btn2" href="cart.html">Add to Cart</h:a> 
-                                    <h:span class="price">${each.price}</h:span> 
+                                    <h:a class="cart-btn2" href="cart?action=add&amp;bookId=${each.bookId}">Add to Cart</h:a> 
+                                    <h:span class="price">${each.price}₫</h:span> 
                                 </h:div>
                             </h:div>
           

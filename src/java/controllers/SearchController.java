@@ -9,7 +9,10 @@ import dao.BookDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -19,16 +22,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.xml.bind.JAXBException;
 import models.Book;
+import models.Category;
 import services.MarshalService;
 
-/**
- *
- * @author nhale
- */
 public class SearchController extends HttpServlet {
 
-    private BookDAO bookDao;
-    private MarshalService mar;
+    private final BookDAO bookDao;
+    private final MarshalService mar;
 
     public SearchController() {
         bookDao = new BookDAO(Book.class);
@@ -67,21 +67,37 @@ public class SearchController extends HttpServlet {
         } else {
 
             String searchText = (String) session.getAttribute("searchText");
-            
-            System.out.println("***********************:" + searchText);
+            List<Book> results;
 
             if (searchText != null) {
-                List<Book> results = bookDao.findByTitle(searchText);
+
+                // search books with matched keywords
+                results = bookDao.findByTitle(searchText);
 
                 if (results == null) {
                     results = new ArrayList<Book>();
+                } else {
+                                        
+//                    Set<Category> categories = new HashSet<Category>();
+//
+//                    // retrieve categories
+//                    for (Book book : results) {
+//                        Category category = book.getCategoryId();
+//                        categories.add(category);
+//                    }
+//
+//                    // save to session
+//                    session.setAttribute("searchedCategories", categories);
                 }
 
-                try {
-                    out.println(mar.marshal(results, Book.class));
-                } catch (JAXBException ex) {
-                    Logger.getLogger(SearchController.class.getName()).log(Level.SEVERE, null, ex);
-                }
+            } else {
+                results = new ArrayList<Book>();
+            }
+
+            try {
+                out.println(mar.marshal(results, Book.class));
+            } catch (JAXBException ex) {
+                Logger.getLogger(SearchController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
