@@ -96,6 +96,10 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
         <servlet-name>CustomerController</servlet-name>
         <servlet-class>controllers.CustomerController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchController</servlet-name>
+        <servlet-class>controllers.SearchController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>zkLoader</servlet-name>
         <url-pattern>*.zul</url-pattern>
@@ -216,6 +220,10 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
     <servlet-mapping>
         <servlet-name>CustomerController</servlet-name>
         <url-pattern>/customer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchController</servlet-name>
+        <url-pattern>/search</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>60</session-timeout>

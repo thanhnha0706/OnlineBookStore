@@ -7,6 +7,7 @@ package dao;
 
 import models.Book;
 import java.io.Serializable;
+import java.util.Hashtable;
 import java.util.List;
 
 public class BookDAO extends BaseDAO implements Serializable, Cloneable {
@@ -33,6 +34,12 @@ public class BookDAO extends BaseDAO implements Serializable, Cloneable {
 
     public boolean delete(Book book) {
         return super.deleteObject(book);
+    }
+    
+    public List<Book> findByTitle(String title) {
+        Hashtable params = new Hashtable();
+        params.put("title", "%" + title + "%");
+        return (List<Book>) super.executeNamedQueryForList("Book.findByTitle", params);
     }
     
 }

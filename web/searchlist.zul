@@ -9,33 +9,11 @@
         <h:section id="content-holder" class="container-fluid container">
             <h:section class="row-fluid">
                 <h:div class="heading-bar">
-                    <h:h2>Book List</h:h2>
+                    <h:h2>Search Results</h:h2>
                     <h:span class="h-line"></h:span>
                 </h:div>
                 <!-- Start Main Content -->
                 <h:section class="span9 first">
-                    <!-- Start Ad Slider Section -->
-                    <h:div class="blog-sec-slider">
-                        <h:div class="slider5">
-                            <h:div class="slide">
-                                <h:a href="#">
-                                    <h:img src="images/image22.jpg" alt=""/>
-                                </h:a>
-                            </h:div>
-                            <h:div class="slide">
-                                <h:a href="#">
-                                    <h:img src="images/image36.jpg" alt=""/>
-                                </h:a>
-                            </h:div>
-                            <h:div class="slide">
-                                <h:a href="#">
-                                    <h:img src="images/image22.jpg" alt=""/>
-                                </h:a>
-                            </h:div>
-                        </h:div>
-                    </h:div>
-                    <!-- End Ad Slider Section -->
-            
                     <!-- Start Grid View Section -->
                     <h:div class="product_sort">
                         <h:div class="row-1">
@@ -76,33 +54,8 @@
                             </h:ul>
                         </h:div>
                     </h:div>
-                    <h:section class="list-holder"
-                               apply="org.zkoss.bind.BindComposer"
-                               viewModel="@id('vm') @init('viewmodels.BookViewModel')">
-                        
-                        <h:article class="item-holder" forEach="${vm.books}">
-                            <h:div class="span2">
-                                <h:a href="book-detail.html">
-                                    <h:img src="images/image09.jpg" alt="Image07" />
-                                </h:a> 
-                            </h:div>
-                            <h:div class="span10">
-                                <h:div class="title-bar">
-                                    <h:a href="book-detail.html">${each.title}</h:a> 
-                                    <h:span>by ${each.author}</h:span>
-                                </h:div>
-                                <h:strong>1 Reviews</h:strong>
-                                <h:span class="rating-bar">
-                                    <h:img alt="Rating Star" src="images/rating-star.png" />
-                                </h:span>
-                                <h:p>${each.shortDescription} </h:p>
-                                <h:div class="cart-price">
-                                    <h:a href="cart?action=add&amp;bookId=${each.bookId}" class="cart-btn2">Add to Cart</h:a>
-                                    <h:span class="price">${each.price}₫</h:span>
-                                </h:div>
-                            </h:div>
-                        </h:article>
-                        
+                    <h:section class="list-holder" id="searchResults">
+                                                
                     </h:section>
                     
                     <h:div class="blog-footer">
