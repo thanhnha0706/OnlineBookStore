@@ -108,6 +108,10 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
         <servlet-name>CategoryController</servlet-name>
         <servlet-class>controllers.CategoryController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>controllers.OrderController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>zkLoader</servlet-name>
         <url-pattern>*.zul</url-pattern>
@@ -240,6 +244,10 @@ Copyright (C) 2004 Potix Corporation. All Rights Reserved.
     <servlet-mapping>
         <servlet-name>CategoryController</servlet-name>
         <url-pattern>/category</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/orders</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>60</session-timeout>

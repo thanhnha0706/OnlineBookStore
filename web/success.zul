@@ -1,6 +1,6 @@
 
 <zk xmlns:h="native">
-    
+        <h:script type="text/javascript" src="js/order.js"></h:script><!-- Checkout -->
         <h:div class="wrapper">
 
     

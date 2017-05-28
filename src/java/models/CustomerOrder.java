@@ -38,6 +38,10 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "CustomerOrder.findByTotalAmount", query = "SELECT c FROM CustomerOrder c WHERE c.totalAmount = :totalAmount")})
 public class CustomerOrder implements Serializable {
 
+    @Size(max = 50)
+    @Column(name = "status")
+    private String status;
+
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -171,6 +175,14 @@ public class CustomerOrder implements Serializable {
     @Override
     public String toString() {
         return "models.CustomerOrder[ orderId=" + orderId + " ]";
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
     
 }
