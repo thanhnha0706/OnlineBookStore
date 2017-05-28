@@ -60,15 +60,8 @@ public class CartController extends HttpServlet {
                 if (book != null) {
                     cart.add(book);
                 }
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                
-                // redirect to booklist                
-                response.sendRedirect("booklist.zul");                
-            } 
-            
-            // get number of books in cart  
-            else if (action.equals("get")) {
+                response.sendRedirect("booklist.zul");
+            } else if (action.equals("get")) {              
                 List<Book> cart = (List<Book>) session.getAttribute("cart");
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");

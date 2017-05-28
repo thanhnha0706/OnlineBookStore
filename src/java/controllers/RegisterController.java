@@ -77,7 +77,7 @@ public class RegisterController extends HttpServlet {
             if (registered != null ){
                 response.sendRedirect("login.zul");
             } else {
-                response.sendRedirect("/");
+                response.sendRedirect("/onlinebookstore");
             }
             
         } catch (NoSuchAlgorithmException ex) {

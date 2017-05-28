@@ -20,6 +20,10 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ *
+ * @author quyqu
+ */
 @Entity
 @Table(name = "customer")
 @XmlRootElement
@@ -62,6 +66,8 @@ public class Customer implements Serializable {
     @Size(max = 255)
     @Column(name = "password")
     private String password;
+    @OneToMany(mappedBy = "customerId")
+    private List<Book> bookList;
     @OneToMany(mappedBy = "customerId")
     private List<CustomerOrder> customerOrderList;
 
@@ -129,6 +135,15 @@ public class Customer implements Serializable {
     }
 
     @XmlTransient
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
+    }
+
+    @XmlTransient
     public List<CustomerOrder> getCustomerOrderList() {
         return customerOrderList;
     }
@@ -159,7 +174,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Customer[ customerId=" + customerId + " ]";
+        return "models.Customer[ customerId=" + customerId + " ]";
     }
     
 }

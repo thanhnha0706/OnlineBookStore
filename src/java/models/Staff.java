@@ -23,6 +23,10 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ *
+ * @author quyqu
+ */
 @Entity
 @Table(name = "staff")
 @XmlRootElement
@@ -111,7 +115,7 @@ public class Staff implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Staff[ staffId=" + staffId + " ]";
+        return "models.Staff[ staffId=" + staffId + " ]";
     }
     
 }
