@@ -4,8 +4,26 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/controllers/CategoryController.java</file>
-            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/web/searchlist.zul</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/controllers/SearchController.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/models/Customer.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/dao/CustomerOrderDAO.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/models/CustomerOrder.java</file>
             <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/controllers/BookController.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/web/js/addbook.js</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/models/Book.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/dao/StaffDAO.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/services/MarshalService.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/dao/BookDAO.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/models/Category.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/models/Staff.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/controllers/OtpController.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/web/addbook.zul</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/dao/CategoryDAO.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/dao/BaseDAO.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/dao/CustomerDAO.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/src/java/services/SecurityService.java</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/web/searchlist.zul</file>
+            <file>file:/Users/nhale/Dropbox/Graduate%20Study/Programming%20Methodology/OnlineBookStore/web/js/search.js</file>
         </group>
     </open-files>
 </project-private>

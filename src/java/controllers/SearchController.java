@@ -27,8 +27,8 @@ import services.MarshalService;
 
 public class SearchController extends HttpServlet {
 
-    private final BookDAO bookDao;
-    private final MarshalService mar;
+    private BookDAO bookDao;
+    private MarshalService mar;
 
     public SearchController() {
         bookDao = new BookDAO(Book.class);

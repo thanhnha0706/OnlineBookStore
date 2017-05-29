@@ -8,7 +8,7 @@
     
         <h:section id="content-holder" class="container-fluid container" style="display: flex;">
         <h:div class="span5 check-method-right" style="margin: 0 auto;"> 
-        <h:strong class="green-t">Register</h:strong>
+        <h:strong class="green-t">Please provide the information of your book</h:strong>
                     <h:form class="form-horizontal" method="post" action="books">
                       <h:div class="control-group">
                         <h:label class="control-label" for="inputTitle">Title <h:sup>*</h:sup></h:label>

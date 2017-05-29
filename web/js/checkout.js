@@ -48,7 +48,6 @@ $(document).ready(function () {
     });
 
     $(".sent-otp").click(function (event) {
-        event.preventDefault();
         sentOtp();
     });
 
@@ -65,6 +64,11 @@ $(document).ready(function () {
             inputAddress: $("#inputAddress").val(),
             inputTelephone: $("#inputTelephone").val()}
         ).done(function (data) {
+                        
+            if (data.indexOf("error") !== -1) {
+                return alert("Your input OTP is incorrect. Please, try again!");
+            }
+            
             window.location = data;
         });
 

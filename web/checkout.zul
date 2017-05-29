@@ -118,6 +118,7 @@
                                     <h:table width="100%" border="0" cellpadding="14">
                                         <h:tr>
                                             <h:td>
+                                                <h:input type="radio" checked="checked" /> 
                                                 <h:a id="payment">
                                                     <h:img src="http://www.baokim.vn/developers/uploads/baokim_btn/thanhtoanantoan-l.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" ></h:img>
                                                 </h:a>                    
@@ -125,7 +126,7 @@
                                         </h:tr>
                                         <h:tr>
                                             <h:td>
-                                                <h:a data-toggle="collapse" data-parent="#accordion2" class="more-btn" href="#collapseFour">Process to Payment</h:a> 
+                                                <h:a data-toggle="collapse" data-parent="#accordion2" class="more-btn sent-otp" href="#collapseFour">Verify Your Order</h:a> 
                                             </h:td>
                                         </h:tr>
                                     </h:table>
@@ -136,7 +137,7 @@
             
                         <h:div class="accordion-group">
                             <h:div class="accordion-heading"> 
-                                <h:a class="accordion-toggle sent-otp" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Process to Payment </h:a> 
+                                <h:a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"> Verify Order </h:a> 
                             </h:div>
                             <h:div id="collapseFour" class="accordion-body collapse">
                                 <h:div class="accordion-inner">
@@ -161,7 +162,7 @@
                                             <h:li>
                                                 <h:div class="control-group">
                                                     <h:div class="controls">
-                                                        <h:button type="submit" id="verify" class="more-btn">Verify</h:button>
+                                                        <h:button type="submit" id="verify" class="more-btn">Verify &amp; Process to Payment</h:button>
                                                     </h:div>
                                                 </h:div>
                                             </h:li>

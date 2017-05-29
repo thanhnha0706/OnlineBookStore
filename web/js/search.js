@@ -12,8 +12,6 @@ $(document).ready(function () {
         // prevent default behaviour
         e.preventDefault();
 
-        console.log("click");
-
         // get searchText
         var searchText = $(this).prev().val().trim();
 
@@ -43,8 +41,6 @@ $(document).ready(function () {
 
         $.get("search", function (data, status) {
             
-            console.log(data);
-
             // remove loader
             $loader.fadeOut(400, "swing", function() {
                 // display results

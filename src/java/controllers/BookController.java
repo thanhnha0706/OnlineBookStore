@@ -104,7 +104,7 @@ public class BookController extends HttpServlet {
             newBook.setCategoryId(dao.findById(categoryId));
             newBook.setBookId(java.util.UUID.randomUUID().toString());
             newBook.setCustomerId(customer);
-            newBook.setStatus("pendding");
+            newBook.setStatus("pending");
             bDao.insert(newBook);
 
             response.sendRedirect("/onlinebookstore");

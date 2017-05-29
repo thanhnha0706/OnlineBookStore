@@ -104,7 +104,7 @@ public class OtpController extends HttpServlet {
         order.setOrderId(java.util.UUID.randomUUID().toString());
         order.setTotalAmount(Float.parseFloat(request.getParameter("total")));
         order.setStaffId(sdao.findById("1"));
-        order.setStatus("pendding");
+        order.setStatus("pending");
         List<Book> bookList = (List<Book>) request.getSession().getAttribute("cart");
         
         order.setBookList(bookList);
